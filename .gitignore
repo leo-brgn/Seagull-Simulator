@@ -1,0 +1,70 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Ll]ibrary/ScriptAssemblies/
+[Ll]ibrary/ShaderCache/
+[Ll]ibrary/AssetServerCacheV3/
+[Ll]ibrary/metadata/
+[Ll]ibrary/UnityGenerated/
+
+# Visual Studio / MonoDevelop / Rider generated
+[Ee]xportedObj/
+[Tt]humbs.db
+[Aa]ssets/Plugins/Editor/Xcode/Native/iOS/Generated/
+[Aa]ssets/Plugins/Editor/iOS/Open/Generated/
+[Aa]ssets/Plugins/Editor/iOS/PBX/
+[Aa]ssets/PreExport/
+[Aa]ssets/PostExport/
+[Aa]ssets/Editor Default Resources/
+[Aa]ssets/StreamingAssets/ucf_player/
+[Aa]ssets/WebPlayerTemplates/
+
+# Rider
+.idea/
+
+# User-specific files
+[Dd]esktop.ini
+[Db]esktop.ini
+*.swp
+*.swo
+*.swn
+[Tt]humbs.db
+
+# Mac-specific
+.DS_Store
+
+# Windows thumbnail cache files
+[Tt]humbs.db
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folder settings
+.vscode/
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+*.xcodeproj
+
+# Steamworks
+Redist/
