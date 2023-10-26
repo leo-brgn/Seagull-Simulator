@@ -25,6 +25,7 @@
 
 # Rider
 .idea/
+.vs
 
 # User-specific files
 [Dd]esktop.ini
@@ -57,6 +58,7 @@ $RECYCLE.BIN/
 
 # Unity3D generated meta files
 *.pidb.meta
+*/*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
