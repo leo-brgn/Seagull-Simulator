@@ -70,3 +70,8 @@ sysinfo.txt
 
 # Steamworks
 Redist/
+
+# Ignore Visual Studio and Visual Studio for Mac generated files
+*.sln
+*.csproj
+*.userprefs
