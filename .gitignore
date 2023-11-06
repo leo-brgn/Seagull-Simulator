@@ -75,3 +75,6 @@ Redist/
 *.sln
 *.csproj
 *.userprefs
+
+# Editor settings
+EditorUserSettings.asset
