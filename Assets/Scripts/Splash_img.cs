@@ -8,7 +8,7 @@ public class Splash_img : MonoBehaviour
 {
 
     const float ImageWidth = 1000.0f,
-                TimeOut = 7.0f;
+                TimeOut = 8.0f;
 
     public enum SplashStates
     {
@@ -47,8 +47,8 @@ public class Splash_img : MonoBehaviour
                 image.color = c;
 
                 if (Time.time - startTime > TimeOut - 1.0f)    //También se puede acabar la presentación por tiempo
-                    Speed = Speed / 2;
-                
+                    Speed = new Vector3(0.0f, 0.0f, 0.0f);
+
                 if (Time.time - startTime > TimeOut)    //También se puede acabar la presentación por tiempo
                     State = SplashStates.Finish;
 
