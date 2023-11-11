@@ -38,10 +38,7 @@ public class Sounds : MonoBehaviour
 
     private void OnWingflap(AnimationEvent animationEvent)
     {
-        if (animationEvent.animatorClipInfo.weight > 0.5f)
-        {
-            AudioSource.PlayClipAtPoint(WingAudioClip, transform.position, FootstepAudioVolume);
-        }
+        AudioSource.PlayClipAtPoint(WingAudioClip, transform.position, FootstepAudioVolume);
     }
 
     
