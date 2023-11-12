@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/MenuScript.cs" />
+    <Compile Include="Assets/Scripts/MapScript.cs" />
     <Compile Include="Assets/Scripts/Sounds.cs" />
     <Compile Include="Assets/Scripts/exitButton.cs" />
     <Compile Include="Assets/SimpleCloudSystem by RM/SCS.cs" />
