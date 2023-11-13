@@ -30,12 +30,7 @@ public class Sounds : MonoBehaviour
             AudioSource.PlayClipAtPoint(LandingAudioClip, transform.position, FootstepAudioVolume);
         }
     }
-
-    private void OnJump(AnimationEvent animationEvent)
-    {
-         AudioSource.PlayClipAtPoint(JumpAudioClip, transform.position, FootstepAudioVolume);
-    }
-
+    
     private void OnWingflap(AnimationEvent animationEvent)
     {
         AudioSource.PlayClipAtPoint(WingAudioClip, transform.position, FootstepAudioVolume);
