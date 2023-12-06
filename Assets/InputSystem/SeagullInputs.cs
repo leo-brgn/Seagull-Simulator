@@ -12,6 +12,8 @@ using UnityEngine.InputSystem;
 		public bool sprint;
 		public bool fly;
 		public bool thrust;
+		public bool inventory;
+		public bool interact;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -52,6 +54,16 @@ using UnityEngine.InputSystem;
 		public void OnThrust(InputValue value) {
 			ThrustInput(value.isPressed);
 		}
+
+		public void OnInventory(InputValue value)
+		{
+			InventoryInput(value.isPressed);
+		}
+
+		public void OnInteract(InputValue value)
+		{
+			InteractInput(value.isPressed);
+		}
 #endif
 
 
@@ -82,6 +94,16 @@ using UnityEngine.InputSystem;
 
 		public void ThrustInput(bool newThrustInput) {
 			thrust = newThrustInput;
+		}
+
+		public void InventoryInput(bool newInventoryState)
+		{
+			inventory = newInventoryState;
+		}
+
+		public void InteractInput(bool newInteractState)
+		{
+			interact = newInteractState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

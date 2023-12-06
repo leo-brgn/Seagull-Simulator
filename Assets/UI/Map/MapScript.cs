@@ -30,11 +30,8 @@ public class MapScript : MonoBehaviour
     void UpdateMinimap(Vector2 playerWorldPosition)
     {
         Vector2 minimapPosition = ConvertWorldToMinimap(playerWorldPosition);
-        Debug.Log(minimapPosition);
-
+        
         Vector2 adjustedPosition = new(minimapPosition.x + 19f, minimapPosition.y - 22f);
-
-        Debug.Log(adjustedPosition);
 
         Vector2 clampedPosition = new(
           Mathf.Clamp(adjustedPosition.x, extentMap.x / 3f + minimapMin.x, (2.0f / 3.0f) * extentMap.x - minimapMax.x),
