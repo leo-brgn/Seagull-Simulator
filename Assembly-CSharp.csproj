@@ -715,20 +715,38 @@
     <Reference Include="mscorlib">
         <HintPath>/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
@@ -748,11 +766,20 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -778,14 +805,29 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="PPv2URPConverters">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
@@ -795,6 +837,9 @@
     </Reference>
     <Reference Include="Cinemachine">
         <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+        <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

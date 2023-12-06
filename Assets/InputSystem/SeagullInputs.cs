@@ -50,7 +50,7 @@ using UnityEngine.InputSystem;
 		}
 
 		public void OnThrust(InputValue value) {
-			ThrustInput(value.Get());
+			ThrustInput(value.isPressed);
 		}
 #endif
 
@@ -80,8 +80,8 @@ using UnityEngine.InputSystem;
 			fly = newFlyState;
 		}
 
-		public void ThrustInput(Vector1 newThrustInput) {
-			
+		public void ThrustInput(bool newThrustInput) {
+			thrust = newThrustInput;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

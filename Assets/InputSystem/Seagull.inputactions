@@ -52,12 +52,12 @@
                 },
                 {
                     "name": "Thrust",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "84fac529-10d9-4360-8bc4-cb8320b780da",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -249,37 +249,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "a4759cf8-80c6-4c82-b3eb-047609714e9c",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "6be50755-548a-477c-8a04-9167f2b512c6",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "c78668be-802d-4c40-9c4c-d3e1052fc3d6",
+                    "name": "",
+                    "id": "aee5f491-8eda-42cc-ac88-3fcc5b332d40",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Thrust",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }
