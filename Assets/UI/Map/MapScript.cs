@@ -17,8 +17,6 @@ public class MapScript : MonoBehaviour
     {
         extentMap = new((minimapMax.x - minimapMin.x), (minimapMax.y - minimapMin.y));
         extentWorld = new((worldMax.x - worldMin.x), (worldMax.y - worldMin.y));
-        Debug.Log(extentMap);
-        Debug.Log(extentWorld);
     }
 
     void Update()

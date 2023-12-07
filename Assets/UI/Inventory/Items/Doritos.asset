@@ -15,6 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 3091309986600741041, guid: f6b8cb06854e947abbe339d0195e4652, type: 3}
   type: 0
   actionType: 0
-  range: {x: 5, y: 4}
+  range: {x: 1, y: 4}
   stackable: 1
   sprite: {fileID: 21300000, guid: 3bbe0b8f4a8af42cc898c600aee30215, type: 3}

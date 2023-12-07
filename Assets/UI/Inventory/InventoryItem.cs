@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     [Header("UI")]
     public Image image;
-    // Text - TextMeshPro
-    public TMP_Text countText;
+    public Text countText;
 
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public int count = 1;
@@ -20,7 +18,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void InitializeItem(Item newItem)
     {
         item = newItem;
-        image.sprite = item.sprite;
+        image.sprite = newItem.sprite;
         RefreshCount();
     }
 
@@ -35,7 +33,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform.parent.parent.parent);
+        transform.SetParent(transform.parent.parent);
     }
 
     public void OnDrag(PointerEventData eventData)

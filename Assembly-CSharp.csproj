@@ -41,26 +41,28 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/PlayerMovementController.cs" />
-     <Compile Include="Assets/UI/Inventory/InventorySlot.cs" />
      <Compile Include="Assets/UI/Inventory/MainInventory.cs" />
+     <Compile Include="Assets/UI/Inventory/InventorySlot.cs" />
+     <Compile Include="Assets/UI/Inventory/Items/Interactable.cs" />
      <Compile Include="Assets/Scripts/Sounds.cs" />
      <Compile Include="Assets/SimpleCloudSystem by RM/SCS.cs" />
      <Compile Include="Assets/StartMenu/playButton.cs" />
+     <Compile Include="Assets/Scripts/Quests.cs" />
      <Compile Include="Assets/Scripts/Splash_text.cs" />
      <Compile Include="Assets/UI/Inventory/InventoryItem.cs" />
      <Compile Include="Assets/StartMenu/exitButton.cs" />
      <Compile Include="Assets/InputSystem/SeagullInputs.cs" />
-     <Compile Include="Assets/UI/Inventory/Interactable.cs" />
      <Compile Include="Assets/Scripts/PlayerInteraction.cs" />
      <Compile Include="Assets/StartMenu/MenuScript.cs" />
      <Compile Include="Assets/StartMenu/ScrollScript.cs" />
      <Compile Include="Assets/StartMenu/backButton.cs" />
+     <Compile Include="Assets/UI/Inventory/Items/Item.cs" />
+     <Compile Include="Assets/Scripts/Quest.cs" />
      <Compile Include="Assets/UI/Inventory/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/BasicRigidBodyPush.cs" />
      <Compile Include="Assets/UI/Map/MapScript.cs" />
      <Compile Include="Assets/StartMenu/creditsButton.cs" />
      <Compile Include="Assets/Scripts/Splash_img.cs" />
-     <Compile Include="Assets/UI/Inventory/Item.cs" />
      <None Include="Assets/TerrainSampleAssets/ThirdPartyNotices.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

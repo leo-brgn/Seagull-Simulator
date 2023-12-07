@@ -30,8 +30,9 @@ public class PlayerInteraction : MonoBehaviour
     }
     
     private void LateUpdate() {
+        
         RaycastHit hit;
-        Vector3 startPosition = transform.position + new Vector3(0, 1, 0);
+        Vector3 startPosition = transform.position + transform.up * 0.01f;
         Vector3 forward = transform.TransformDirection(Vector3.forward) * interactionDistance;
         Debug.DrawRay(startPosition, forward, Color.green); // Dessine un rayon vert pour le débogage
 
@@ -56,6 +57,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             _helpText.GetComponent<TMP_Text>().text = "";
         }
+        
     }
 
    

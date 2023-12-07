@@ -14,6 +14,10 @@ using UnityEngine.InputSystem;
 		public bool thrust;
 		public bool inventory;
 		public bool interact;
+		public float mouseWheel;
+		public bool use;
+
+		public bool throwObject;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -64,6 +68,21 @@ using UnityEngine.InputSystem;
 		{
 			InteractInput(value.isPressed);
 		}
+
+		public void OnMouseWheel(InputValue value)
+		{
+			MouseWheelInput(value.Get<float>());
+		}
+
+		public void OnUse(InputValue value)
+		{
+			UseInput(value.isPressed);
+		}
+
+		public void OnThrowObject(InputValue value)
+		{
+			ThrowObjectInput(value.isPressed);
+		}
 #endif
 
 
@@ -104,6 +123,21 @@ using UnityEngine.InputSystem;
 		public void InteractInput(bool newInteractState)
 		{
 			interact = newInteractState;
+		}
+
+		public void MouseWheelInput(float newMouseWheel)
+		{
+			mouseWheel = newMouseWheel;
+		}
+
+		public void UseInput(bool newUseState)
+		{
+			use = newUseState;
+		}
+
+		public void ThrowObjectInput(bool newThrowState)
+		{
+			throwObject = newThrowState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

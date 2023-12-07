@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: 4848300384292060325}
   - component: {fileID: 5772452915712951833}
   - component: {fileID: 2493597147281436470}
+  - component: {fileID: 5725214950946713596}
+  - component: {fileID: 4850968604705243026}
+  - component: {fileID: 4683127053917603533}
+  - component: {fileID: 9161386757858243212}
   m_Layer: 0
   m_Name: Doritos
   m_TagString: Interactable
@@ -33,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -55, z: 0}
 --- !u!33 &6214790855527408193
 MeshFilter:
@@ -133,3 +137,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0554543, y: 2.0362368, z: 0.38695484}
   m_Center: {x: -0.007867813, y: 0.015447149, z: 0.16134274}
+--- !u!114 &5725214950946713596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091309986600741041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f260ba61a3ff443699963521fbc70cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 598acaebd10274a928b530f67dc7f035, type: 2}
+  _inventory: {fileID: 0}
+--- !u!114 &4850968604705243026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091309986600741041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f260ba61a3ff443699963521fbc70cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 598acaebd10274a928b530f67dc7f035, type: 2}
+  _inventory: {fileID: 0}
+--- !u!114 &4683127053917603533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091309986600741041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f260ba61a3ff443699963521fbc70cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 598acaebd10274a928b530f67dc7f035, type: 2}
+  _inventory: {fileID: 0}
+--- !u!114 &9161386757858243212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091309986600741041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f260ba61a3ff443699963521fbc70cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 598acaebd10274a928b530f67dc7f035, type: 2}
+  _inventory: {fileID: 0}
