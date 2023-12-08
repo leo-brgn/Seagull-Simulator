@@ -40,6 +40,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
                 agent.SetDestination(point);
+                anim.SetFloat("vertical", 1);
             }
         }
 
