@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public int maxStack = 5;
+    public float throwForce = 20f;
     public GameObject _seagull;
     public SeagullInputs _input;
 
@@ -62,10 +63,10 @@ public class InventoryManager : MonoBehaviour
             _input.throwObject = false;
             Item item = GetSelectedItem(true);
             if (item != null) {
-                // Put item in front of seagull
                 Vector3 position = _seagull.transform.position;
-                position += _seagull.transform.forward * 2f + _seagull.transform.up * .3f;
+                position += _seagull.transform.up;
                 GameObject itemGo = Instantiate(item.prefab, position, Quaternion.identity);
+                itemGo.GetComponent<Rigidbody>().AddForce(_seagull.transform.forward* throwForce, ForceMode.Impulse);
             }
         }
     }

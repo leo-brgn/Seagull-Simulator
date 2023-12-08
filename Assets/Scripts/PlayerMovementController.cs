@@ -84,6 +84,9 @@ public class PlayerMovementController : MonoBehaviour
     private int _animIDFly;
     private int _animIDGrounded;
 
+    private Vector2 worldMin = new(60f, 230f); // Coin inférieur gauche de la carte réelle
+    private Vector2 worldMax = new(190f, 330f); // Coin supérieur droit de la carte réelle
+
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
 #endif
@@ -286,7 +289,19 @@ public class PlayerMovementController : MonoBehaviour
             transform.position += transform.forward * flyingSpeed * Time.deltaTime;
 
         }
-
+        
+        // The world is bounded by a rectangle with corners worldMin and worldMax
+        // If the player goes near the edge, wind pushes them back with strength proportional to distance from the edge
+        Vector3 playerPos = transform.position;
+        float _threshold = 10f;
+        if (playerPos.x < worldMin.x + _threshold)
+        {
+            transform.position += new Vector3(1f, 0f, 0f) * (worldMin.x + _threshold - playerPos.x);
+        }
+        else if (playerPos.x > worldMax.x - _threshold)
+        {
+            transform.position += new Vector3(-1f, 0f, 0f) * (playerPos.x - (worldMax.x - _threshold));
+        }
     }
 
     void JumpAndGravity()
