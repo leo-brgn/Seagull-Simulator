@@ -13,11 +13,12 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
 
     public Animator anim; 
-
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim.SetFloat("vertical", 0);
+        //anim.SetFloat("orizontal", 1);
     }
 
     
@@ -32,7 +33,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             anim.SetFloat("vertical", 0);
         }
 
-        if (agent.remainingDistance <= agent.stoppingDistance) //done with path
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
             anim.SetFloat("vertical", 0);
             Vector3 point;
@@ -48,7 +49,6 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     }
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
@@ -58,10 +58,27 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             result = hit.position;
             return true;
         }
-
+        
         result = Vector3.zero;
         return false;
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the object that triggered the collider is the desired avatar
+        if (other.CompareTag("SeagullV5-Tex"))
+        {
+            // Perform desired actions when the avatar is nearby
+            //Debug.Log("The target avatar is nearby!");
+            anim.SetFloat("orizontal", 2);
+
+            // You can perform other actions here, such as stopping or slowing down the NavMeshAgent
+        }
+        anim.SetFloat("orizontal", 2);
+    }
+
+    
 
     
 }
