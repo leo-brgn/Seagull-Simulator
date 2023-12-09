@@ -8,9 +8,14 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.310DEAF1" = "navigation"
-	"OpenInspectorPreview.310DEAF1" = "0"
-	"currentGroup.310DEAF1" = "all"
+	"picker_window_position_offset.768FEAAC" = "700,8;-307,2;320;550,4"
+	"picker_search_text.768FEAAC" = ""
+	"last_search.768FEAAC" = ""
+	"OpenInspectorPreview.768FEAAC" = "0"
+	"currentGroup.768FEAAC" = "all"
+	"last_search.388C2F70" = ""
+	"OpenInspectorPreview.388C2F70" = "0"
+	"currentGroup.388C2F70" = "all"
 }
 providers = {
 	log = {
@@ -62,7 +67,6 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-	"na"
 ]
 searchItemFavorites = [
 ]
