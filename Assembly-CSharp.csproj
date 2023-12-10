@@ -66,6 +66,14 @@
     <Compile Include="Assets\ChangeSettingsButton.cs" />
     <Compile Include="Assets\UI\Map\MapScript.cs" />
     <Compile Include="Assets\ContinueButton.cs" />
+    <Compile Include="Assets\UI\Inventory\Items\Interactable.cs" />
+    <Compile Include="Assets\StarterAssets\anime-charactermegumi\Megumi2\Script\New\ThirdPerson.cs" />
+    <Compile Include="Assets\StartMenu\playButton.cs" />
+    <Compile Include="Assets\StarterAssets\anime-charactermegumi\Megumi2\Script\New\PlayerBasicCode.cs" />
+    <Compile Include="Assets\StartMenu\ScrollScript.cs" />
+    <Compile Include="Assets\StartMenu\backButton.cs" />
+    <Compile Include="Assets\Scripts\RandomMovement.cs" />
+    <Compile Include="Assets\UI\Map\MapScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
     <Compile Include="Assets\UI\Inventory\MainInventory.cs" />
     <Compile Include="Assets\UI\Inventory\InventorySlot.cs" />
@@ -852,11 +860,14 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>

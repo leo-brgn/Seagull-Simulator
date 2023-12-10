@@ -41,7 +41,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 783.2
+=======
+    width: 784
+>>>>>>> NPC-branch
     height: 450.4
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
@@ -196,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 109
+  controlID: 93
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1104,7 +1106,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StarterAssets/ThirdPersonController/Character/Animations
+    - Assets/StarterAssets/anime-charactermegumi
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1112,17 +1114,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/StarterAssets/ThirdPersonController/Character/Animations
+  - Assets/StarterAssets/anime-charactermegumi/source/Megumi2/Megumi2/_FBX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\costo\\OneDrive - Alma Mater Studiorum Universit\xE0
     di Bologna\\Documents\\GitHub\\Seagull-Simulator"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 239}
-    m_SelectedIDs: bea10000
-    m_LastClickedID: 41406
-    m_ExpandedIDs: 000000005e9d0000609d0000629d0000649d0000669d0000689d00006a9d00006c9d00006e9d0000709d0000729d0000749d0000769d0000789d00007a9d00007c9d000000ca9a3b
+    scrollPos: {x: 0, y: 227}
+    m_SelectedIDs: b0b20000
+    m_LastClickedID: 45744
+    m_ExpandedIDs: 00000000a2970000a4970000a6970000a8970000aa970000ac970000ae970000b0970000b2970000b4970000b6970000b8970000ba970000bc970000b29b000096a100009ea10000a2a10000a6a1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1320,14 +1322,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.37318185
+    - e00: 0.6840909
       e01: 0
       e02: 0
       e03: 15
       e10: 0
-      e11: 0.37318185
+      e11: 0.6840909
       e12: 0
-      e13: -62.597748
+      e13: -116.061356
       e20: 0
       e21: 0
       e22: 1
@@ -1368,14 +1370,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.52685714
+    - e00: 0.51521367
       e01: 0
       e02: 0
-      e03: -7.8342743
+      e03: 112.890594
       e10: 0
-      e11: 0.52685714
+      e11: 0.51521367
       e12: 0
-      e13: 78.222855
+      e13: 324.00342
       e20: 0
       e21: 0
       e22: 1
@@ -1384,46 +1386,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.68774873
+    - e00: 0.5868003
       e01: 0
       e02: 0
-      e03: -33.14241
+      e03: 209.81067
       e10: 0
-      e11: 0.68774873
+      e11: 0.5868003
       e12: 0
-      e13: 29.828262
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.5824997
-      e01: 0
-      e02: 0
-      e03: -8.706879
-      e10: 0
-      e11: 0.5824997
-      e12: 0
-      e13: -36.41237
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.34568423
-      e01: 0
-      e02: 0
-      e03: -2.2842102
-      e10: 0
-      e11: 0.34568423
-      e12: 0
-      e13: 74.36
+      e13: 223.26505
       e20: 0
       e21: 0
       e22: 1
