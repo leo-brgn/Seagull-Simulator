@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c623634180c47a6b3ffc0fddca2163, type: 3}
   m_Name: Doritos
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3747047945495950840, guid: 79e21ce9b99bf445facfa4244c9b4b75, type: 3}
+  prefab: {fileID: 3091309986600741041, guid: f6b8cb06854e947abbe339d0195e4652, type: 3}
   type: 0
   actionType: 0
   range: {x: 1, y: 4}
