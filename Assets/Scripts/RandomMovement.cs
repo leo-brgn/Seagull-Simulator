@@ -8,9 +8,9 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
 {
     public NavMeshAgent agent;
     public float range; //radius of sphere
-
     public Transform centrePoint; //centre of the area the agent wants to move around in
-    //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
+    public Transform targetAvatar;
+    public float minDistance = 5f;
 
     public Animator anim; 
     
@@ -33,17 +33,32 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             anim.SetFloat("vertical", 0);
         }
 
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        // Check the distance between this object and the target avatar
+        float distance = Vector3.Distance(transform.position, targetAvatar.position);
+
+        // If the distance is less than the minimum distance, perform the desired actions
+        if (distance < minDistance)
         {
-            anim.SetFloat("vertical", 0);
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
+            Debug.Log("The target avatar is nearby at a distance of: " + distance + " units.");
+            agent.SetDestination(targetAvatar.position);
+            // You can perform other actions here, such as stopping or slowing down the NavMeshAgent
+        }
+        else
+        {
+            if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-                anim.SetFloat("vertical", 1);
+                anim.SetFloat("vertical", 0);
+                Vector3 point;
+                if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
+                    agent.SetDestination(point);
+                    anim.SetFloat("vertical", 1);
+                }
             }
         }
+
+        
 
         
     }
@@ -64,7 +79,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     }
 
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         // Check if the object that triggered the collider is the desired avatar
         if (other.CompareTag("SeagullV5-Tex"))
@@ -77,8 +92,10 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
         }
         anim.SetFloat("orizontal", 2);
     }
-
+    */
     
 
-    
+
+
+
 }
