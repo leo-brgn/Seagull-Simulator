@@ -45,7 +45,7 @@ public class PlayerMovementController : MonoBehaviour
     public float GroundedRadius = 0.28f;
     [Tooltip("What layers the character uses as ground")]
     public LayerMask GroundLayers;
- 
+
     [Header("Camera")]
     [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
     public GameObject CinemachineCameraTarget;
@@ -72,14 +72,14 @@ public class PlayerMovementController : MonoBehaviour
     public bool isFirstLevel = false;
 
     private bool isFlying = false;
-    private bool isLanding = false;
+    // private bool isLanding = false;
     private float _jumpTimeoutDelta;
     private float _fallTimeoutDelta;
 
     private int _animIDGroundedSpeed;
     private int _animIDGroundedMotionSpeed;
-    private int  _animIDFlyingSpeed;
-    private int _animIDJump; 
+    private int _animIDFlyingSpeed;
+    private int _animIDJump;
     private int _animIDFall;
     private int _animIDFly;
     private int _animIDGrounded;
@@ -175,9 +175,12 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         JumpAndGravity();
-        if (isFirstLevel) {
+        if (isFirstLevel)
+        {
             isGrounded = false;
-        } else {
+        }
+        else
+        {
             DoFly();
             GroundedCheck();
         }
@@ -190,12 +193,14 @@ public class PlayerMovementController : MonoBehaviour
         {
             if (_input.fly)
             {
-                isLanding = true;
+                // isLanding = true;
                 StartCoroutine(LandingSequence());
             }
         }
-        if (isGrounded) {
-            if (_input.fly) {
+        if (isGrounded)
+        {
+            if (_input.fly)
+            {
                 StartCoroutine(TakeOffSequence());
             }
         }
@@ -203,7 +208,8 @@ public class PlayerMovementController : MonoBehaviour
 
     void Move()
     {
-        if (!isFlying) {
+        if (!isFlying)
+        {
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? RunSpeed : WalkSpeed;
 
@@ -265,7 +271,9 @@ public class PlayerMovementController : MonoBehaviour
 
             _animator.SetFloat(_animIDGroundedSpeed, _animationBlend);
             _animator.SetFloat(_animIDGroundedMotionSpeed, inputMagnitude);
-        } else {
+        }
+        else
+        {
             // Inputs for roll and pitch
             float rollInput = Input.GetAxis("Horizontal"); // A and D for roll
             float pitchInput = Input.GetAxis("Vertical"); // W and S for pitch
@@ -289,7 +297,7 @@ public class PlayerMovementController : MonoBehaviour
             transform.position += transform.forward * flyingSpeed * Time.deltaTime;
 
         }
-        
+
         // The world is bounded by a rectangle with corners worldMin and worldMax
         // If the player goes near the edge, wind pushes them back with strength proportional to distance from the edge
         Vector3 playerPos = transform.position;
@@ -306,7 +314,8 @@ public class PlayerMovementController : MonoBehaviour
 
     void JumpAndGravity()
     {
-        if (isGrounded) {
+        if (isGrounded)
+        {
             _fallTimeoutDelta = FallTimeout;
 
             _animator.SetBool(_animIDJump, false);
@@ -318,7 +327,8 @@ public class PlayerMovementController : MonoBehaviour
             }
 
             // Jump
-            if (_input.jump && _jumpTimeoutDelta <= 0.0f) {
+            if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+            {
                 _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
                 _animator.SetBool(_animIDJump, true);
             }
@@ -327,12 +337,16 @@ public class PlayerMovementController : MonoBehaviour
             {
                 _jumpTimeoutDelta -= Time.deltaTime;
             }
-        } else {
+        }
+        else
+        {
             _jumpTimeoutDelta = JumpTimeout;
             if (_fallTimeoutDelta >= 0.0f)
             {
                 _fallTimeoutDelta -= Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 _animator.SetBool(_animIDJump, false);
             }
             // if we are not grounded, do not jump
@@ -356,7 +370,7 @@ public class PlayerMovementController : MonoBehaviour
             QueryTriggerInteraction.Ignore);
 
         _animator.SetBool(_animIDGrounded, isGrounded);
-        
+
     }
 
 
