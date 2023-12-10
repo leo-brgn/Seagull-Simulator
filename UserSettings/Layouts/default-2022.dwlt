@@ -19,7 +19,6 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Scene
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,8 +44,6 @@ MonoBehaviour:
     width: 784
 >>>>>>> NPC-branch
     height: 450.4
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -198,7 +195,6 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 93
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -982,7 +978,6 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 167.33717, y: -2.5834482, z: 275.08813}
     speed: 2
     m_Value: {x: 167.33717, y: -2.5834482, z: 275.08813}
   m_RenderMode: 0
@@ -1030,9 +1025,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0017814471, y: -0.9899692, z: 0.14113335, w: 0.012173918}
     speed: 2
-    m_Value: {x: 0.00178135, y: -0.98991525, z: 0.14112566, w: 0.012173255}
   m_Size:
     m_Target: 8.543458
     speed: 2
@@ -1106,7 +1099,6 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StarterAssets/anime-charactermegumi
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1114,7 +1106,6 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/StarterAssets/anime-charactermegumi/source/Megumi2/Megumi2/_FBX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\costo\\OneDrive - Alma Mater Studiorum Universit\xE0
     di Bologna\\Documents\\GitHub\\Seagull-Simulator"
@@ -1122,9 +1113,6 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 227}
-    m_SelectedIDs: b0b20000
-    m_LastClickedID: 45744
-    m_ExpandedIDs: 00000000a2970000a4970000a6970000a8970000aa970000ac970000ae970000b0970000b2970000b4970000b6970000b8970000ba970000bc970000b29b000096a100009ea10000a2a10000a6a1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1179,7 +1167,6 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ce400000925c00004e59000022590000a25a0000ec5a000000000000f8b310008864000054100100e48c010026a20000be2003002e030900320309003e030900
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1288,7 +1275,6 @@ MonoBehaviour:
     - {fileID: -1989011105851455761, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
     - {fileID: 1107174189693655754, guid: f198b02e0e99f8d458e8beaa4c101d65, type: 2}
     - {fileID: 8242379061949249746, guid: 4bc5b0813c40d4cf2b6603c0bb654af9, type: 2}
-    - {fileID: -2154576087050127331, guid: 6443209558b899a46876b63fb68584ae, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.23536842
       e01: 0
@@ -1418,14 +1404,10 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.5868003
       e01: 0
       e02: 0
-      e03: 209.81067
       e10: 0
-      e11: 0.5868003
       e12: 0
-      e13: 223.26505
       e20: 0
       e21: 0
       e22: 1
@@ -1435,9 +1417,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6443209558b899a46876b63fb68584ae, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -3604583309476358027, guid: 6443209558b899a46876b63fb68584ae, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   - m_Target: {fileID: -2154576087050127331, guid: 6443209558b899a46876b63fb68584ae, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
