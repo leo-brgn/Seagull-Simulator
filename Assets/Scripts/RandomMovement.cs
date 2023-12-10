@@ -24,37 +24,41 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     
     void Update()
     {
-        if (agent.velocity.magnitude > 0)
-        {
-            anim.SetFloat("vertical", 1);
-        }
-        else
-        {
-            anim.SetFloat("vertical", 0);
-        }
-
         // Check the distance between this object and the target avatar
-        float distance = Vector3.Distance(transform.position, targetAvatar.position);
+        float distance = Vector3.Distance(agent.transform.position, targetAvatar.position);
 
         // If the distance is less than the minimum distance, perform the desired actions
         if (distance < minDistance)
         {
-            anim.SetFloat("vertical", 2); // Enter in Seagull_interaction
+            anim.SetFloat("vertical", 1); // Enter in Seagull_interaction
 
-            if (distance > 0.1f)
+            if (distance > 2f)
             {
                 anim.SetFloat("orizontal", 0);
                 agent.SetDestination(targetAvatar.position);
             }
             else
             {
+                Vector3 directionToTarget = targetAvatar.position - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(directionToTarget, Vector3.up);
+                transform.rotation = rotation;
                 anim.SetFloat("orizontal", 1);
+                //agent.isStopped = true;
             }
-
         }
         else
         {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            anim.SetFloat("orizontal", 0);
+            if (agent.velocity.magnitude > 0)
+            {
+                anim.SetFloat("vertical", 1);
+            }
+            else
+            {
+                anim.SetFloat("vertical", 0);
+            }
+
+            if (agent.isStopped || agent.remainingDistance <= agent.stoppingDistance)
             {
                 anim.SetFloat("vertical", 0);
                 Vector3 point;
