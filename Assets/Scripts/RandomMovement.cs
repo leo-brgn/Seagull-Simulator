@@ -39,9 +39,18 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
         // If the distance is less than the minimum distance, perform the desired actions
         if (distance < minDistance)
         {
-            Debug.Log("The target avatar is nearby at a distance of: " + distance + " units.");
-            agent.SetDestination(targetAvatar.position);
-            // You can perform other actions here, such as stopping or slowing down the NavMeshAgent
+            anim.SetFloat("vertical", 2); // Enter in Seagull_interaction
+
+            if (distance > 0.1f)
+            {
+                anim.SetFloat("orizontal", 0);
+                agent.SetDestination(targetAvatar.position);
+            }
+            else
+            {
+                anim.SetFloat("orizontal", 1);
+            }
+
         }
         else
         {

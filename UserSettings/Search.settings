@@ -8,9 +8,20 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+<<<<<<< HEAD
 	"last_search.310DEAF1" = "Pause"
 	"OpenInspectorPreview.310DEAF1" = "0"
 	"currentGroup.310DEAF1" = "all"
+=======
+	"picker_window_position_offset.768FEAAC" = "700,8;-307,2;320;550,4"
+	"picker_search_text.768FEAAC" = ""
+	"last_search.768FEAAC" = ""
+	"OpenInspectorPreview.768FEAAC" = "0"
+	"currentGroup.768FEAAC" = "all"
+	"last_search.388C2F70" = ""
+	"OpenInspectorPreview.388C2F70" = "0"
+	"currentGroup.388C2F70" = "all"
+>>>>>>> a28730b6672da7921ca919f9c0b03a2df38136f4
 }
 providers = {
 	log = {
@@ -62,9 +73,12 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+<<<<<<< HEAD
 	"Pause "
 	"Pause Editor"
 	"na"
+=======
+>>>>>>> a28730b6672da7921ca919f9c0b03a2df38136f4
 ]
 searchItemFavorites = [
 ]
