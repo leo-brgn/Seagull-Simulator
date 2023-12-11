@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -54,9 +55,9 @@ public class PlayerMovement : MonoBehaviour
 
 
         // check flyMode
-        flymode = GetFlyMode();
-        rb.useGravity = !flymode;
-        if (flymode)
+        flyMode = GetFlyMode();
+        rb.useGravity = !flyMode;
+        if (flyMode)
         {
             // Apply forces only in the horizontal plane
             var horizontalForce = Vector3.ProjectOnPlane(moveDirection.normalized, Vector3.up);
@@ -78,7 +79,10 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (flymode) horizontalInput = 0f;
+        if (flyMode)
+        {
+        }
+
 
         // when to jump 
         if (Input.GetKey(jumpKey) && !spacePressedThisFrame)
@@ -96,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentTime - lastSpacePressTime < 2f)
             {
                 spacePressCount++;
-                if (spacePressCount == 3) flymode = true;
+                if (spacePressCount == 3) flyMode = true;
             }
             else
             {
@@ -119,11 +123,31 @@ public class PlayerMovement : MonoBehaviour
 
         // on ground
         if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        }
 
         // in air
-        else if (!grounded)
+        // in fly mode
+        else if (flyMode)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+            // Check if the Shift key is pressed for descending
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                // Set the y-velocity for descent
+                rb.AddForce(Vector3.down * moveSpeed * 50f, ForceMode.Force);
+
+            // Check if the Space key is pressed for descending
+            if (Input.GetKey(KeyCode.Space))
+                // Set the y-velocity for descent
+                rb.AddForce(Vector3.up * moveSpeed * 50f, ForceMode.Force);
+        }
+        // when falling (I guess)
+        else if (!grounded)
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
     private void SpeedControl()
@@ -149,8 +173,9 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    // Start Fly mechanics
-    public bool flymode;
+    // --- Start Fly mechanics ---
+
+    public bool flyMode;
     public float speed = 0f;
     public int spacePressCount = 0;
     public float lastSpacePressTime = 0f;
@@ -161,6 +186,6 @@ public class PlayerMovement : MonoBehaviour
     private bool GetFlyMode()
     {
         if (grounded) return false;
-        return flymode;
+        return flyMode;
     }
 }

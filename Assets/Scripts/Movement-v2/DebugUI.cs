@@ -21,7 +21,7 @@ namespace Movement_v2
             // Update the UI text with the value from the ValueProvider script
             if (textComponent != null && playerMovement != null)
                 textComponent.text = $"Speed: {playerMovement.speed}\n" + $"Grounded: {playerMovement.grounded}\n" +
-                                     $"FlyMode: {playerMovement.flymode}\n" +
+                                     $"FlyMode: {playerMovement.flyMode}\n" +
                                      $"Times Space pressed: {playerMovement.spacePressCount}\n" +
                                      $"Space Time: {playerMovement.lastSpacePressTime}\n";
         }
