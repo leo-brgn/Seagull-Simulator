@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -131,17 +132,23 @@ public class PlayerMovement : MonoBehaviour
         // in fly mode
         else if (flyMode)
         {
+            if (verticalInput < 0) verticalInput = 0;
+            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
 
-            // Check if the Shift key is pressed for descending
+            // move ↓ : Check if the Shift key is pressed for descending
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                 // Set the y-velocity for descent
                 rb.AddForce(Vector3.down * moveSpeed * 50f, ForceMode.Force);
 
-            // Check if the Space key is pressed for descending
+            // move ↑ : Check if the Space key is pressed for upward movement
             if (Input.GetKey(KeyCode.Space))
                 // Set the y-velocity for descent
                 rb.AddForce(Vector3.up * moveSpeed * 50f, ForceMode.Force);
+
+            // decelerate
+            if (Input.GetKey(KeyCode.S))
+                rb.velocity = rb.velocity * 0.95f * Time.deltaTime;
         }
         // when falling (I guess)
         else if (!grounded)
