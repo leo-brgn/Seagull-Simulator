@@ -6,14 +6,15 @@ namespace Movement_v2
     public class DebugUI : MonoBehaviour
     {
         public PlayerMovement playerMovement;
+        public ThirdPersonCam thirdPersonCam;
         public TextMeshProUGUI textComponent;
 
         private void Start()
         {
             // Ensure the TextMeshPro component and ValueProvider are assigned
-            if (textComponent == null) Debug.LogError("Text component not assigned to ValueDisplay script.");
-
-            if (playerMovement == null) Debug.LogError("PlayerMovement not assigned to PlayerMovement script.");
+            if (textComponent == null) Debug.LogError("Text component not assigned to DebugUI script.");
+            if (playerMovement == null) Debug.LogError("PlayerMovement not assigned to DebugUI script.");
+            if (thirdPersonCam == null) Debug.LogError("ThirdPersonCam not assigned to DebugUI script.");
         }
 
         private void Update()
@@ -22,8 +23,7 @@ namespace Movement_v2
             if (textComponent != null && playerMovement != null)
                 textComponent.text = $"Speed: {playerMovement.speed}\n" + $"Grounded: {playerMovement.grounded}\n" +
                                      $"FlyMode: {playerMovement.flyMode}\n" +
-                                     $"Times Space pressed: {playerMovement.spacePressCount}\n" +
-                                     $"Space Time: {playerMovement.lastSpacePressTime}\n";
+                                     $"Camera Type: {thirdPersonCam.currentStyle}\n";
         }
     }
 }

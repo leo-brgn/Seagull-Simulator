@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Movement_v2;
 using UnityEngine;
 
 public class ThirdPersonCam : MonoBehaviour
 {
+    public CinemachineFreeLook freeLookCamera;
+
+    public float minCameraDistance = 2f;
+    public float maxCameraDistance = 15f;
+
     [Header("References")] public Transform orientation;
     public Transform player;
     public Transform playerObj;
@@ -15,17 +21,15 @@ public class ThirdPersonCam : MonoBehaviour
 
     public Transform combatLookAt;
 
-    public GameObject thirdPersonCam;
-    public GameObject combatCam;
-    public GameObject topDownCam;
+    public GameObject basicCam;
+    public GameObject flyCam;
 
     public CameraStyle currentStyle;
 
     public enum CameraStyle
     {
         Basic,
-        Combat,
-        Topdown
+        Fly
     }
 
     private void Start()
@@ -36,54 +40,41 @@ public class ThirdPersonCam : MonoBehaviour
 
     private void Update()
     {
-        // switch styles
-        if (Input.GetKeyDown(KeyCode.Alpha1)) SwitchCameraStyle(CameraStyle.Basic);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchCameraStyle(CameraStyle.Combat);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) SwitchCameraStyle(CameraStyle.Topdown);
+        SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
 
-        // rotate orientation
-        var viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
-        orientation.forward = viewDir.normalized;
 
-        // roate player object
-
-        if (currentStyle == CameraStyle.Basic || currentStyle == CameraStyle.Topdown)
+        if (currentStyle == CameraStyle.Basic)
         {
-            var horizontalInput = Input.GetAxis("Horizontal");
-            var verticalInput = Input.GetAxis("Vertical");
-            if (playerMovement.flyMode)
-            {
-                // Prevent rotation
-                horizontalInput = 0;
-                if (verticalInput < 0) verticalInput = 0;
-            }
+            // rotate orientation
+            var transformPosition = transform.position;
+            var playerPosition = player.position;
+            // The purpose is to get a horizontal direction vector that represents
+            // where the camera is pointing relative to the player, ignoring any vertical offset.
+            var viewDir = playerPosition - new Vector3(transformPosition.x, playerPosition.y, transformPosition.z);
 
-            var inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-            if (inputDir != Vector3.zero)
-                playerObj.forward =
-                    Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
+            // Set player orientation
+            orientation.forward = viewDir.normalized;
+            playerObj.forward = viewDir.normalized;
         }
 
-        else if (currentStyle == CameraStyle.Combat)
+        else if (currentStyle == CameraStyle.Fly)
         {
-            var dirToCombatLookAt = combatLookAt.position -
-                                    new Vector3(transform.position.x, combatLookAt.position.y, transform.position.z);
-            orientation.forward = dirToCombatLookAt.normalized;
-
-            playerObj.forward = dirToCombatLookAt.normalized;
+            // Rotate the player's orientation based on the camera's forward direction
+            var forward = transform.forward;
+            var direction = new Vector3(forward.x, forward.y * 0.9f, forward.z);
+            playerObj.forward = direction;
+            orientation.forward = direction;
         }
     }
 
     private void SwitchCameraStyle(CameraStyle newStyle)
     {
-        combatCam.SetActive(false);
-        thirdPersonCam.SetActive(false);
-        topDownCam.SetActive(false);
+        basicCam.SetActive(false);
+        flyCam.SetActive(false);
 
-        if (newStyle == CameraStyle.Basic) thirdPersonCam.SetActive(true);
-        if (newStyle == CameraStyle.Combat) combatCam.SetActive(true);
-        if (newStyle == CameraStyle.Topdown) topDownCam.SetActive(true);
+        if (newStyle == CameraStyle.Basic) basicCam.SetActive(true);
+        if (newStyle == CameraStyle.Fly) basicCam.SetActive(true);
 
         currentStyle = newStyle;
     }
