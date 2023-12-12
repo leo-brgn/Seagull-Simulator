@@ -70,10 +70,11 @@ namespace Movement_v2
             SpeedControl();
             // handle drag
             if (grounded) {
-                _animator.SetBool(_animIDFly, true);
+                _animator.SetBool(_animIDFly, false);
+                _animator.SetBool(_animIDGrounded, true);
                 rb.drag = airborneDrag;
             } else {
-                _animator.SetBool(_animIDFly, true);
+                _animator.SetBool(_animIDGrounded, false);
                 rb.drag = airborneDrag;
             }
                 
@@ -141,8 +142,6 @@ namespace Movement_v2
             // on ground
             if (grounded)
             {
-                // Remove fly
-                _animator.SetBool(_animIDFly, false);
                 moveSpeed = walkSpeed;
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
                     if (playerData.RunStamina())
@@ -158,10 +157,9 @@ namespace Movement_v2
             // in fly mode
             else if (flyMode)
             {
+                _animator.SetBool(_animIDFly, true);
                 // Remove jump
                 _animator.SetBool(_animIDJump, false);
-                // Add fly
-                _animator.SetBool(_animIDFly, true);
                 moveDirection = orientation.forward * verticalInput; // + orientation.right * horizontalInput;
 
 
