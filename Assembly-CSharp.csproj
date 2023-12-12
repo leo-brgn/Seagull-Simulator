@@ -45,60 +45,77 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets/UI/StartMenu/playButton.cs" />
+     <Compile Include="Assets/UI/Inventory/Items/Interactable.cs" />
+     <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/ThirdPerson.cs" />
+     <Compile Include="Assets/UI/InGameMenu/ChangeSettingsButton.cs" />
+     <Compile Include="Assets/UI/StartMenu/mainMenuButton.cs" />
+     <Compile Include="Assets/Scripts/PlayerData.cs" />
+     <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/PlayerBasicCode.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/PlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/DebugUI.cs" />
+     <Compile Include="Assets/UI/StartMenu/ScrollScript.cs" />
+     <Compile Include="Assets/UI/GUIScript.cs" />
+     <Compile Include="Assets/UI/StartMenu/backButton.cs" />
+     <Compile Include="Assets/Scripts/RandomMovement.cs" />
+     <Compile Include="Assets/UI/InGameMenu/ContinueButton.cs" />
+     <Compile Include="Assets/UI/Map/MapScript.cs" />
+     <Compile Include="Assets/UI/InGameMenu/saveSettings.cs" />
      <Compile Include="Assets/Scripts/PlayerMovementController.cs" />
-     <Compile Include="Assets/saveSettings.cs" />
      <Compile Include="Assets/UI/Inventory/MainInventory.cs" />
      <Compile Include="Assets/UI/Inventory/InventorySlot.cs" />
-     <Compile Include="Assets/UI/Inventory/Items/Interactable.cs" />
      <Compile Include="Assets/Scripts/Sounds.cs" />
+     <Compile Include="Assets/UI/InGameMenu/SaveLoadGame.cs" />
      <Compile Include="Assets/SimpleCloudSystem by RM/SCS.cs" />
-     <Compile Include="Assets/StartMenu/playButton.cs" />
      <Compile Include="Assets/Scripts/Quests.cs" />
      <Compile Include="Assets/Scripts/Splash_text.cs" />
-     <Compile Include="Assets/Scripts/Movement-v2/PlayerMovement.cs" />
      <Compile Include="Assets/UI/Inventory/InventoryItem.cs" />
-     <Compile Include="Assets/StartMenu/exitButton.cs" />
      <Compile Include="Assets/InputSystem/SeagullInputs.cs" />
-     <Compile Include="Assets/Scripts/Movement-v2/DebugUI.cs" />
+     <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/PlayerMoveCode.cs" />
+     <Compile Include="Assets/UI/StartMenu/exitButton.cs" />
      <Compile Include="Assets/Scripts/PlayerInteraction.cs" />
-     <Compile Include="Assets/StartMenu/MenuScript.cs" />
-     <Compile Include="Assets/StartMenu/ScrollScript.cs" />
-     <Compile Include="Assets/StartMenu/backButton.cs" />
      <Compile Include="Assets/UI/Inventory/Items/Item.cs" />
      <Compile Include="Assets/Scripts/Quest.cs" />
      <Compile Include="Assets/UI/Inventory/InventoryManager.cs" />
-     <Compile Include="Assets/ChangeSettingsButton.cs" />
+     <Compile Include="Assets/UI/StartMenu/creditsButton.cs" />
+     <Compile Include="Assets/UI/StartMenu/MenuScript.cs" />
      <Compile Include="Assets/Scripts/BasicRigidBodyPush.cs" />
-     <Compile Include="Assets/UI/Map/MapScript.cs" />
-     <Compile Include="Assets/SaveLoadGame.cs" />
-     <Compile Include="Assets/StartMenu/creditsButton.cs" />
      <Compile Include="Assets/Scripts/Movement-v2/ThirdPersonCam.cs" />
      <Compile Include="Assets/Scripts/Splash_img.cs" />
-     <Compile Include="Assets/ContinueButton.cs" />
+     <Compile Include="Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Props" />
      <None Include="Assets/TerrainSampleAssets/ThirdPartyNotices.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/TerrainSampleAssets/Textures/Terrain" />
      <Folder Include="Assets/Sounds/Sfx" />
+     <Folder Include="Assets/StarterAssets/indian-man-in-suit/source" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs/CustomFunctions" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/Casual1/SourceFiles/Texture" />
      <Folder Include="Assets/UI/Inventory/UI" />
      <Folder Include="Assets/UI/Inventory/Items" />
      <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs" />
+     <Folder Include="Assets/StarterAssets/indian-man-in-suit" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Train Assets" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/SimpleCloudSystem by RM/SceneComponents/LABELS/Materials" />
      <Folder Include="Assets/TerrainSampleAssets/Models" />
+     <Folder Include="Assets/StarterAssets/Elizabeth Warren caricature" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/buildings" />
      <Folder Include="Assets/SimpleCloudSystem by RM/SceneComponents/Landscape" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/TerrainSampleAssets/Textures/Details" />
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds" />
+     <Folder Include="Assets/StarterAssets/ThirdPersonController/Scripts" />
      <Folder Include="Assets/Sounds/Sfx/Wing" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/Casual1" />
      <Folder Include="Assets/TerrainSampleAssets" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/Demo files" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Materials" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Animator" />
      <Folder Include="Assets/Sounds/BG_Music" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character" />
      <Folder Include="Assets/StarterAssets" />
@@ -106,6 +123,7 @@
      <Folder Include="Assets/Textures" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New" />
      <Folder Include="Assets/UI/Inventory/Items/Materials" />
      <Folder Include="Assets/Scenes" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
@@ -117,22 +135,34 @@
      <Folder Include="Assets/UI/Inventory" />
      <Folder Include="Assets/TextMesh Pro" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Modular Pieces" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Texture" />
+     <Folder Include="Assets/Scenes/Environment" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Shader/DoubleSided.shader" />
+     <Folder Include="Assets/StarterAssets/indian-man-in-suit/textures" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Train Assets" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Signboards" />
      <Folder Include="Assets/TerrainSampleAssets/TerrainBrushes" />
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite/Model/Textures" />
+     <Folder Include="Assets/UI/InGameMenu" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/Casual1/SourceFiles/Material" />
      <Folder Include="Assets/UI" />
      <Folder Include="Assets/Idyllic Anime Japan/Materials" />
      <Folder Include="Assets/TerrainSampleAssets/Prefabs" />
      <Folder Include="Assets/SimpleCloudSystem by RM/SceneComponents/Landscape/Materials" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Mat" />
+     <Folder Include="Assets/StarterAssets/Elizabeth Warren caricature/Prefab" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Animations" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Nature" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Signs and Boards" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/Casual1/SourceFiles" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/_FBX" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Prefabs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
@@ -144,9 +174,11 @@
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite/Model" />
      <Folder Include="Assets/Sounds/Sfx/Voice" />
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite" />
+     <Folder Include="Assets/StarterAssets/Elizabeth Warren caricature/Materials" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Sfx" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Models" />
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds/DarkClouds_Materials/DarkClouds_Textures" />
      <Folder Include="Assets/TerrainSampleAssets/Materials" />
@@ -154,9 +186,15 @@
      <Folder Include="Assets/TerrainSampleAssets/Settings" />
      <Folder Include="Assets/Idyllic Anime Japan/Materials/Misc" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Materials" />
+     <None Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Shader/UnlitColor.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Shader" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Tex" />
+     <Folder Include="Assets/StarterAssets/Elizabeth Warren caricature/animation" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Readme" />
      <Folder Include="Assets/Sounds/Sfx/Footsteps" />
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite/Model/Materials" />
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds/SunnyClouds_Materials/SunnyClouds_Textures" />
@@ -165,7 +203,7 @@
      <Folder Include="Assets/SimpleCloudSystem by RM" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Props" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Buildings" />
-     <Folder Include="Assets/StartMenu" />
+     <Folder Include="Assets/UI/StartMenu" />
      <None Include="Assets/SimpleCloudSystem by RM/SCS Instructions.txt" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Street Assets" />
      <Folder Include="Assets/TerrainSampleAssets/Textures/Heightmaps" />
@@ -180,23 +218,30 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <Folder Include="Assets/TerrainSampleAssets/TerrainLayers" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Nature" />
      <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs/Subgraphs" />
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite/Model/Animator" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <Folder Include="Assets/UI/Map" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <None Include="Assets/SimpleCloudSystem by RM/Read Me.txt" />
-     <Folder Include="Assets/StartMenu/Imagenes" />
+     <Folder Include="Assets/StarterAssets/AnimeGirls/Casual1/SourceFiles/Mesh" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2" />
+     <Folder Include="Assets/UI/StartMenu/Imagenes" />
      <None Include="Assets/TerrainSampleAssets/ShaderGraphs/CustomFunctions/CustomLighting.hlsl" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/_VRM" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Demo" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Traffic Signs" />
      <Folder Include="Assets/Sounds/Sfx/Jump" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Props/new" />
+     <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -848,6 +893,9 @@
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
      </Reference>
@@ -926,6 +974,9 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
@@ -947,14 +998,20 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
