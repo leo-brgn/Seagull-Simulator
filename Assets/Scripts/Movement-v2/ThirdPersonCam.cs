@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -8,8 +9,10 @@ public class ThirdPersonCam : MonoBehaviour
 {
     public CinemachineFreeLook freeLookCamera;
 
-    public float minCameraDistance = 2f;
-    public float maxCameraDistance = 15f;
+    public float maxTiltAngle = 75f;
+    public float minTiltAngle = -75f;
+    public float tiltSpeed = 5f;
+
 
     [Header("References")] public Transform orientation;
     public Transform player;
@@ -42,6 +45,10 @@ public class ThirdPersonCam : MonoBehaviour
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
 
+        var playerVelocity = playerMovement.rb.velocity;
+        var playerSpeed = Mathf.Max(Mathf.Abs(playerVelocity.x), Mathf.Abs(playerVelocity.y),
+            Mathf.Abs(playerVelocity.z));
+
 
         if (currentStyle == CameraStyle.Basic)
         {
@@ -65,7 +72,35 @@ public class ThirdPersonCam : MonoBehaviour
             var direction = new Vector3(forward.x, forward.y * 0.9f, forward.z);
             playerObj.forward = direction;
             orientation.forward = direction;
+
+
+            var horizontalInput = Input.GetAxis("Horizontal");
+
+            // Get the current tilt angle
+            var currentTiltAngle = freeLookCamera.m_Lens.Dutch;
+
+            // Calculate the new tilt angle based on input
+            var tiltAngleRatio = currentTiltAngle - horizontalInput * tiltSpeed * Time.deltaTime;
+
+            // If no input is given, smoothly rotate back to zero
+            if (Mathf.Approximately(horizontalInput, 0f))
+                tiltAngleRatio = Mathf.Lerp(currentTiltAngle, 0f, Time.deltaTime * 0.5f);
+            else
+                // Apply the new tilt angle within a specified range
+                tiltAngleRatio = Mathf.Clamp(tiltAngleRatio, minTiltAngle, maxTiltAngle);
+
+            // Apply the new tilt angle to the camera's rig
+            freeLookCamera.m_Lens.Dutch = tiltAngleRatio;
+            playerObj.Rotate(Vector3.forward, tiltAngleRatio);
+
+            // Push the bird towards the tilt direction
+            var tiltForceMultiplier = Math.Abs(tiltAngleRatio) *
+                playerSpeed / playerMovement.moveSpeed;
+            playerMovement.rb.AddForce(playerObj.up * tiltForceMultiplier, ForceMode.Force);
         }
+
+        // Sense of Speed
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeed);
     }
 
     private void SwitchCameraStyle(CameraStyle newStyle)

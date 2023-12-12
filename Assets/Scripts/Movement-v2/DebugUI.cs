@@ -23,7 +23,8 @@ namespace Movement_v2
             if (textComponent != null && playerMovement != null)
                 textComponent.text = $"Speed: {playerMovement.speed}\n" + $"Grounded: {playerMovement.grounded}\n" +
                                      $"FlyMode: {playerMovement.flyMode}\n" +
-                                     $"Camera Type: {thirdPersonCam.currentStyle}\n";
+                                     $"Camera Type: {thirdPersonCam.currentStyle}\n" +
+                                     $"FOV: {thirdPersonCam.freeLookCamera.m_Lens.FieldOfView}\n";
         }
     }
 }

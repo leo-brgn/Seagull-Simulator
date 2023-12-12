@@ -28,7 +28,7 @@ namespace Movement_v2
 
         private Vector3 moveDirection;
 
-        private Rigidbody rb;
+        public Rigidbody rb;
 
 
         private void Start()
@@ -87,6 +87,7 @@ namespace Movement_v2
                     // Reset the count if more than 2 seconds have passed since the last press
                     spacePressCount = 1;
                 }
+
                 // Update the last space press time
                 lastSpacePressTime = currentTime;
             }
@@ -113,8 +114,6 @@ namespace Movement_v2
             else if (flyMode)
             {
                 moveDirection = orientation.forward * verticalInput; // + orientation.right * horizontalInput;
-
-                // rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
 
                 // move ↓ : Check if the Shift key is pressed for descending
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
