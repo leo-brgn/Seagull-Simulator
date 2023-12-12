@@ -8,6 +8,8 @@ public class Sounds : MonoBehaviour
     public AudioClip LandingAudioClip;
     public AudioClip JumpAudioClip;
     public AudioClip WingAudioClip;
+
+    public AudioClip ShoutClip;
     public AudioClip[] FootstepAudioClips;
     [Range(0, 1)] public float FootstepAudioVolume = 0.1f;
 
@@ -34,6 +36,11 @@ public class Sounds : MonoBehaviour
     private void OnWingflap(AnimationEvent animationEvent)
     {
         AudioSource.PlayClipAtPoint(WingAudioClip, transform.position, FootstepAudioVolume);
+    }
+
+    private void OnShout(AnimationEvent animationEvent)
+    {
+        AudioSource.PlayClipAtPoint(ShoutClip, transform.position, FootstepAudioVolume);
     }
 
     
