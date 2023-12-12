@@ -50,6 +50,7 @@ namespace Movement_v2
 
         private void FixedUpdate()
         {
+            // TODO: go in fly mode when ground is more than 10m down with RayCast
             // ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
             // check flyMode

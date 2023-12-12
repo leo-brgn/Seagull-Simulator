@@ -18,11 +18,6 @@ public class ThirdPersonCam : MonoBehaviour
     public Transform player;
     public Transform playerObj;
     public PlayerMovement playerMovement;
-    public Rigidbody rb;
-
-    public float rotationSpeed;
-
-    public Transform combatLookAt;
 
     public GameObject basicCam;
     public GameObject flyCam;
@@ -41,6 +36,7 @@ public class ThirdPersonCam : MonoBehaviour
         Cursor.visible = false;
     }
 
+    // TODO: TitlAngle relative to playerSpeed
     private void Update()
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
