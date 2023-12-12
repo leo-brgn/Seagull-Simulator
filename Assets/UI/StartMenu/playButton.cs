@@ -10,6 +10,6 @@ public class playButton : MonoBehaviour
     // Called when we click the "Play" button.
     public void playButtonStart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
     }
 }
