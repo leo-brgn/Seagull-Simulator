@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         saveFilePath = Application.persistentDataPath + "/savegame.json";
     }
 
+    // Called when we click the "save" button.
     public void SaveGame()
     {
         Vector3 playerPosition = transform.position;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         showStatus("Game successfully saved");
     }
 
+    // Called when we click the "load" button.
     public void LoadGame()
     {
         if (File.Exists(saveFilePath))

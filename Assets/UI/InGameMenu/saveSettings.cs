@@ -55,6 +55,7 @@ public class configScript : MonoBehaviour
         }
     }
 
+    // Called when we click the "save" button.
     public void SaveConfig()
     {
         PlayerPrefs.SetFloat("Volume", sliderVolume.value);
