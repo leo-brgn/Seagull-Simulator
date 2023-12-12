@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2982393837067547211, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: cursorLocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3037060740617107336, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1298,6 +1302,34 @@ PrefabInstance:
     - target: {fileID: 3852868797157677799, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 228788942}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_value
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Slider, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4022434218619897907, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       propertyPath: m_text
@@ -1798,6 +1830,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3665555925600338083, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1701018866}
+    - targetCorrespondingSourceObject: {fileID: 7728666877806310944, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 287614857}
   m_SourcePrefab: {fileID: 100100000, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
 --- !u!224 &228788939 stripped
 RectTransform:
@@ -1814,6 +1849,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3665555925600338083, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
   m_PrefabInstance: {fileID: 228788938}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &228788942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3901375721476566233, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+  m_PrefabInstance: {fileID: 228788938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &239328786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +2006,7 @@ GameObject:
   - component: {fileID: 284787004}
   - component: {fileID: 284787005}
   m_Layer: 5
-  m_Name: Sustain Bar
+  m_Name: Stamina Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2038,7 +2084,48 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 284787005}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &287614856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7728666877806310944, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+  m_PrefabInstance: {fileID: 228788938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &287614857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287614856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1838f5757380c4480b0d46495cd20f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  stamina: 100
+  maxStamina: 100
+  healthRegen: 1
+  staminaRegen: 2
+  staminaRegenDelay: 1
+  staminaRegenDelayTimer: 0
+  healthRegenDelay: 1
+  healthRegenDelayTimer: 0
+  healthSlider: {fileID: 228788942}
+  staminaSlider: {fileID: 284787005}
 --- !u!1 &355720928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,6 +3842,7 @@ MonoBehaviour:
   range: 50
   centrePoint: {fileID: 863630372}
   targetAvatar: {fileID: 228788940}
+  seagull: {fileID: 287614856}
   minDistance: 5
   anim: {fileID: 863630371}
 --- !u!195 &863630374
@@ -4133,6 +4221,7 @@ MonoBehaviour:
   range: 50
   centrePoint: {fileID: 994668193}
   targetAvatar: {fileID: 228788940}
+  seagull: {fileID: 287614856}
   minDistance: 5
   anim: {fileID: 994668192}
 --- !u!195 &994668195
@@ -4235,7 +4324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c2caa095874ba43835b6462cb7244f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartScene: 0
   guiScript: {fileID: 1701018866}
 --- !u!114 &1024273404
 MonoBehaviour:
@@ -4866,7 +4954,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 50
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -5116,6 +5204,7 @@ MonoBehaviour:
   range: 50
   centrePoint: {fileID: 1181359200}
   targetAvatar: {fileID: 228788940}
+  seagull: {fileID: 287614856}
   minDistance: 5
   anim: {fileID: 1181359199}
 --- !u!195 &1181359202
@@ -5386,7 +5475,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: musicToggle
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
@@ -6012,7 +6101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c2caa095874ba43835b6462cb7244f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartScene: 0
   guiScript: {fileID: 0}
 --- !u!1 &1559314387
 GameObject:
@@ -6285,6 +6373,7 @@ MonoBehaviour:
   range: 10
   centrePoint: {fileID: 1643061799}
   targetAvatar: {fileID: 228788940}
+  seagull: {fileID: 287614856}
   minDistance: 5
   anim: {fileID: 1643061800}
 --- !u!195 &1643061802
@@ -6429,6 +6518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMenuCanvas: {fileID: 1026631882}
   settingsCanvas: {fileID: 2063388857}
+  seagull: {fileID: 287614856}
 --- !u!1 &1746729271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,7 +6583,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6583,7 +6673,7 @@ AudioSource:
   m_GameObject: {fileID: 1802717442}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5a80a84e675ce3949982faaa91cb8d90, type: 2}
   m_audioClip: {fileID: 8300000, guid: def511d639ceb44f1a001d1bcd271701, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

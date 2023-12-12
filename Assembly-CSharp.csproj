@@ -44,6 +44,8 @@
      <Compile Include="Assets/UI/Inventory/Items/Interactable.cs" />
      <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/ThirdPerson.cs" />
      <Compile Include="Assets/UI/InGameMenu/ChangeSettingsButton.cs" />
+     <Compile Include="Assets/UI/StartMenu/mainMenuButton.cs" />
+     <Compile Include="Assets/Scripts/PlayerData.cs" />
      <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/PlayerBasicCode.cs" />
      <Compile Include="Assets/UI/StartMenu/ScrollScript.cs" />
      <Compile Include="Assets/UI/GUIScript.cs" />

@@ -6,6 +6,7 @@ public class GUIScript : MonoBehaviour
 {
     public GameObject gameMenuCanvas;
     public GameObject settingsCanvas;
+    public GameObject seagull;
 
     void Awake() {
         // Get canvas called "GameMenu"
@@ -28,6 +29,15 @@ public class GUIScript : MonoBehaviour
                 return;
             }
         }  
+        if (seagull == null)
+        {
+            seagull = GameObject.Find("Seagull");
+            if (seagull == null)
+            {
+                Debug.LogError("Could not find seagull");
+                return;
+            }
+        }
     }
 
     void Start() {
@@ -72,6 +82,7 @@ public class GUIScript : MonoBehaviour
         gameMenuCanvas.SetActive(true);
         settingsCanvas.SetActive(false);
         Time.timeScale = 0;
+        deactivateMouseCursor();
         return true;
     }
 
@@ -97,7 +108,18 @@ public class GUIScript : MonoBehaviour
         gameMenuCanvas.SetActive(false);
         settingsCanvas.SetActive(false);
         Time.timeScale = 1;
+        activateMouseCursor();
         return true;
+    }
+
+    public void deactivateMouseCursor() {
+        SeagullInputs seagullInputs = seagull.GetComponent<SeagullInputs>();
+        seagullInputs.cursorInputForLook = false;
+    }
+
+    public void activateMouseCursor() {
+        SeagullInputs seagullInputs = seagull.GetComponent<SeagullInputs>();
+        seagullInputs.cursorInputForLook = true;
     }
 
 

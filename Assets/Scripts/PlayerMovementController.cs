@@ -71,6 +71,8 @@ public class PlayerMovementController : MonoBehaviour
     public float maxFlyingSpeed = 3f; // Maximum flying speed
     public bool isFirstLevel = false;
 
+    public PlayerData playerData;
+
     private bool isFlying = false;
     private bool isLanding = false;
     private float _jumpTimeoutDelta;
@@ -151,6 +153,7 @@ public class PlayerMovementController : MonoBehaviour
         }
 
         _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
+        playerData = gameObject.GetComponent<PlayerData>();
     }
 
     private void LateUpdate()
@@ -203,8 +206,15 @@ public class PlayerMovementController : MonoBehaviour
     void Move()
     {
         if (!isFlying) {
+            float targetSpeed = WalkSpeed;
             // set target speed based on move speed, sprint speed and if sprint is pressed
-            float targetSpeed = _input.sprint ? RunSpeed : WalkSpeed;
+            if (_input.sprint) {
+                if (playerData.RunStamina()) {
+                    targetSpeed = RunSpeed;
+                } else {
+                    targetSpeed = WalkSpeed;
+                }
+            }
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
