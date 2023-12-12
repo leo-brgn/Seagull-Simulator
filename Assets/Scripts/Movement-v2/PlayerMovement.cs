@@ -149,8 +149,6 @@ namespace Movement_v2
                 {
                     if (playerData.RunStamina())
                         moveSpeed = sprintSpeed;
-                    else
-                        moveSpeed = walkSpeed;
                 }
 
                 _animator.SetFloat(_animIDGroundedSpeed, moveSpeed);
