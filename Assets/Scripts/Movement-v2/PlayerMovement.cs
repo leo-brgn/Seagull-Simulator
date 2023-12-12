@@ -185,7 +185,8 @@ namespace Movement_v2
                     // Forward movement only
                     rb.AddForce(moveDirection.normalized * flySpeed * 10f, ForceMode.Force);
             }
-            // when falling (I guess)
+            
+            // when falling
             else if (!grounded)
             {
                 _animator.SetFloat(_animIDFlyingSpeed, 0f);
@@ -200,12 +201,12 @@ namespace Movement_v2
             var velocity = rb.velocity;
             var flatVel = new Vector3(velocity.x, 0f, velocity.z);
 
-            // limit velocity if needed
-            if (flatVel.magnitude > moveSpeed)
-            {
-                var limitedVel = flatVel.normalized * moveSpeed;
-                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            }
+            // // limit velocity if needed
+            // if (flatVel.magnitude > moveSpeed)
+            // {
+            //     var limitedVel = flatVel.normalized * moveSpeed;
+            //     rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            // }
 
             debugSpeed = flatVel.magnitude;
         }
