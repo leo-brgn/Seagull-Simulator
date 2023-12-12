@@ -52,26 +52,8 @@ namespace Movement_v2
         {
             // ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
-
-
             // check flyMode
             flyMode = GetFlyMode();
-
-            // Disable Gravity in FlyMode
-            rb.useGravity = !flyMode;
-            if (flyMode)
-            {
-                // Apply forces only in the horizontal plane
-                var horizontalForce = Vector3.ProjectOnPlane(moveDirection.normalized, Vector3.up);
-
-                // Set the vertical velocity to zero
-                var currentVelocity = rb.velocity;
-                currentVelocity.y = 0f;
-                rb.velocity = currentVelocity;
-
-                // Add forces only in the horizontal plane
-                rb.AddForce(horizontalForce * moveSpeed * airMultiplier, ForceMode.Force);
-            }
 
             MovePlayer();
         }
@@ -81,10 +63,8 @@ namespace Movement_v2
             horizontalInput = Input.GetAxisRaw("Horizontal");
             verticalInput = Input.GetAxisRaw("Vertical");
 
-            if (flyMode) horizontalInput = 0;
 
-
-            // when to jump 
+            // 3x jumps in 2 sec -> player enters flyMode
             if (Input.GetKey(jumpKey) && !spacePressedThisFrame)
             {
                 // Set the flag to true to indicate that the space key was pressed in this frame
@@ -107,7 +87,6 @@ namespace Movement_v2
                     // Reset the count if more than 2 seconds have passed since the last press
                     spacePressCount = 1;
                 }
-
                 // Update the last space press time
                 lastSpacePressTime = currentTime;
             }
@@ -118,6 +97,9 @@ namespace Movement_v2
 
         private void MovePlayer()
         {
+            // Disable Gravity in FlyMode
+            rb.useGravity = !flyMode;
+
             // calculate movement direction
             moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
@@ -137,12 +119,12 @@ namespace Movement_v2
                 // move ↓ : Check if the Shift key is pressed for descending
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.down * moveSpeed * 50f, ForceMode.Force);
+                    rb.AddForce(Vector3.down * moveSpeed * 3f, ForceMode.Force);
 
                 // move ↑ : Check if the Space key is pressed for upward movement
                 if (Input.GetKey(KeyCode.Space))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.up * moveSpeed * 50f, ForceMode.Force);
+                    rb.AddForce(Vector3.up * moveSpeed * 3f, ForceMode.Force);
 
 
                 // Decelerate when pressing the down key
@@ -178,10 +160,7 @@ namespace Movement_v2
 
         private void Jump()
         {
-            // reset y velocity
-            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-            rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+            if (spacePressCount != 3) rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         }
 
         // --- Start Fly mechanics ---
