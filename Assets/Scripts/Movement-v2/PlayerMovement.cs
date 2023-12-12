@@ -4,21 +4,18 @@ namespace Movement_v2
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [Header("Movement")]
-        public float walkSpeed = 10f;
+        [Header("Movement")] public float walkSpeed = 10f;
         public float sprintSpeed = 30f;
 
         [HideInInspector] public float moveSpeed;
+        public float flySpeed;
 
         public float groundDrag;
         public float airborneDrag;
 
         public float jumpForce;
-        public float airMultiplier;
 
-        [HideInInspector] 
-
-        [Header("Keybinds")] public KeyCode jumpKey = KeyCode.Space;
+        [HideInInspector] [Header("Keybinds")] public KeyCode jumpKey = KeyCode.Space;
 
         [Header("Ground Check")] public float playerHeight;
         public LayerMask whatIsGround;
@@ -69,15 +66,17 @@ namespace Movement_v2
             MyInput();
             SpeedControl();
             // handle drag
-            if (grounded) {
+            if (grounded)
+            {
                 _animator.SetBool(_animIDFly, false);
                 _animator.SetBool(_animIDGrounded, true);
                 rb.drag = airborneDrag;
-            } else {
+            }
+            else
+            {
                 _animator.SetBool(_animIDGrounded, false);
                 rb.drag = airborneDrag;
             }
-                
         }
 
         private void FixedUpdate()
@@ -123,7 +122,9 @@ namespace Movement_v2
 
                 // Update the last space press time
                 lastSpacePressTime = currentTime;
-            } else {
+            }
+            else
+            {
                 _animator.SetBool(_animIDJump, false);
             }
 
@@ -142,14 +143,16 @@ namespace Movement_v2
             // on ground
             if (grounded)
             {
+                _animator.SetBool(_animIDFly, false);
                 moveSpeed = walkSpeed;
-                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                {
                     if (playerData.RunStamina())
                         moveSpeed = sprintSpeed;
                     else
                         moveSpeed = walkSpeed;
                 }
-                    
+
                 _animator.SetFloat(_animIDGroundedSpeed, moveSpeed);
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
             }
@@ -168,12 +171,12 @@ namespace Movement_v2
                 // move ↓ : Check if the Shift key is pressed for descending
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.down * moveSpeed * 3f, ForceMode.Force);
+                    rb.AddForce(Vector3.down * flySpeed * 3f, ForceMode.Force);
 
                 // move ↑ : Check if the Space key is pressed for upward movement
                 if (Input.GetKey(KeyCode.Space))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.up * moveSpeed * 3f, ForceMode.Force);
+                    rb.AddForce(Vector3.up * flySpeed * 3f, ForceMode.Force);
 
 
                 // Decelerate when pressing the down key
@@ -182,16 +185,18 @@ namespace Movement_v2
                     rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 0.03f);
                 else
                     // Forward movement only
-                    rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+                    rb.AddForce(moveDirection.normalized * flySpeed * 10f, ForceMode.Force);
             }
             // when falling (I guess)
             else if (!grounded)
             {
                 _animator.SetFloat(_animIDFlyingSpeed, 0f);
-                rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+                rb.AddForce(moveDirection.normalized * flySpeed * 10f, ForceMode.Force);
             }
         }
 
+
+        // Only for debug Information
         private void SpeedControl()
         {
             var velocity = rb.velocity;
@@ -204,22 +209,24 @@ namespace Movement_v2
                 rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             }
 
-            speed = flatVel.magnitude;
+            debugSpeed = flatVel.magnitude;
         }
 
 
         private void Jump()
         {
-            if (spacePressCount != 3) {
+            if (spacePressCount != 3)
+            {
                 rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
                 _animator.SetBool(_animIDJump, true);
-            } 
+            }
         }
 
         // --- Start Fly mechanics ---
 
         public bool flyMode;
-        public float speed = 0f;
+
+        public float debugSpeed = 0f;
         public int spacePressCount = 0;
         public float lastSpacePressTime = 0f;
 
