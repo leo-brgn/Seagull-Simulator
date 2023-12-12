@@ -4,7 +4,11 @@ namespace Movement_v2
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [Header("Movement")] public float moveSpeed;
+        [Header("Movement")]
+        public float walkSpeed = 10f;
+        public float sprintSpeed = 30f;
+
+        [HideInInspector] public float moveSpeed;
 
         public float groundDrag;
         public float airborneDrag;
@@ -12,8 +16,7 @@ namespace Movement_v2
         public float jumpForce;
         public float airMultiplier;
 
-        [HideInInspector] public float walkSpeed;
-        [HideInInspector] public float sprintSpeed;
+        [HideInInspector] 
 
         [Header("Keybinds")] public KeyCode jumpKey = KeyCode.Space;
 
@@ -26,15 +29,39 @@ namespace Movement_v2
         private float horizontalInput;
         private float verticalInput;
 
+        private int _animIDGroundedSpeed;
+        private int _animIDGroundedMotionSpeed;
+        private int _animIDFlyingSpeed;
+        private int _animIDJump;
+        private int _animIDFall;
+        private int _animIDFly;
+        private int _animIDFlySpeed;
+        private int _animIDGrounded;
+
+        private Animator _animator;
+
         private Vector3 moveDirection;
 
         public Rigidbody rb;
+        public PlayerData playerData;
 
 
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
+            AssignAnimationIDs();
+            _animator = GetComponent<Animator>();
+        }
+
+        private void AssignAnimationIDs()
+        {
+            _animIDGroundedSpeed = Animator.StringToHash("groundedSpeed");
+            _animIDGroundedMotionSpeed = Animator.StringToHash("groundedMotionSpeed");
+            _animIDFlyingSpeed = Animator.StringToHash("flyingSpeed");
+            _animIDJump = Animator.StringToHash("isJumping");
+            _animIDFly = Animator.StringToHash("isFlying");
+            _animIDGrounded = Animator.StringToHash("isGrounded");
         }
 
         private void Update()
@@ -42,17 +69,21 @@ namespace Movement_v2
             MyInput();
             SpeedControl();
             // handle drag
-            if (grounded)
-                rb.drag = groundDrag;
-            else
+            if (grounded) {
+                _animator.SetBool(_animIDFly, true);
                 rb.drag = airborneDrag;
+            } else {
+                _animator.SetBool(_animIDFly, true);
+                rb.drag = airborneDrag;
+            }
+                
         }
 
         private void FixedUpdate()
         {
             // TODO: go in fly mode when ground is more than 10m down with RayCast
             // ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
+            grounded = Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, 1f);
             // check flyMode
             flyMode = GetFlyMode();
 
@@ -91,6 +122,8 @@ namespace Movement_v2
 
                 // Update the last space press time
                 lastSpacePressTime = currentTime;
+            } else {
+                _animator.SetBool(_animIDJump, false);
             }
 
             // Check if the space key is released to reset the flag
@@ -108,14 +141,32 @@ namespace Movement_v2
             // on ground
             if (grounded)
             {
+                // Remove fly
+                _animator.SetBool(_animIDFly, false);
+                moveSpeed = walkSpeed;
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+                    if (playerData.RunStamina())
+                        moveSpeed = sprintSpeed;
+                    else
+                        moveSpeed = walkSpeed;
+                }
+                    
+                _animator.SetFloat(_animIDGroundedSpeed, moveSpeed);
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
             }
 
             // in fly mode
             else if (flyMode)
             {
+                // Remove jump
+                _animator.SetBool(_animIDJump, false);
+                // Add fly
+                _animator.SetBool(_animIDFly, true);
                 moveDirection = orientation.forward * verticalInput; // + orientation.right * horizontalInput;
 
+
+                // Add the speed
+                _animator.SetFloat(_animIDFlyingSpeed, 100f);
                 // move ↓ : Check if the Shift key is pressed for descending
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     // Set the y-velocity for descent
@@ -138,6 +189,7 @@ namespace Movement_v2
             // when falling (I guess)
             else if (!grounded)
             {
+                _animator.SetFloat(_animIDFlyingSpeed, 0f);
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
             }
         }
@@ -160,7 +212,10 @@ namespace Movement_v2
 
         private void Jump()
         {
-            if (spacePressCount != 3) rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+            if (spacePressCount != 3) {
+                rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+                _animator.SetBool(_animIDJump, true);
+            } 
         }
 
         // --- Start Fly mechanics ---
