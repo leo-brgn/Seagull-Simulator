@@ -83,7 +83,6 @@ public class PlayerMovementController : MonoBehaviour
     private int _animIDFall;
     private int _animIDFly;
     private int _animIDGrounded;
-
     private Vector2 worldMin = new(60f, 230f); // Coin inférieur gauche de la carte réelle
     private Vector2 worldMax = new(190f, 330f); // Coin supérieur droit de la carte réelle
 
@@ -169,7 +168,6 @@ public class PlayerMovementController : MonoBehaviour
         _animIDFly = Animator.StringToHash("isFlying");
         _animIDGrounded = Animator.StringToHash("isGrounded");
         _animIDFall = Animator.StringToHash("FreeFall");
-
     }
 
     void Update()
@@ -182,6 +180,7 @@ public class PlayerMovementController : MonoBehaviour
             GroundedCheck();
         }
         Move();
+        Shout();
     }
 
     void DoFly()
@@ -302,6 +301,10 @@ public class PlayerMovementController : MonoBehaviour
         {
             transform.position += new Vector3(-1f, 0f, 0f) * (playerPos.x - (worldMax.x - _threshold));
         }
+    }
+
+    void Shout() {
+        //TODO
     }
 
     void JumpAndGravity()

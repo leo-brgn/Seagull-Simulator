@@ -13,6 +13,8 @@ public class configScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioMixer audioMixer;
 
+    public GUIScript guiScript;
+
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -59,11 +61,6 @@ public class configScript : MonoBehaviour
         PlayerPrefs.SetFloat("Brightness", sliderBrightness.value);
         PlayerPrefs.SetInt("Music", toggleMusic.isOn ? 1 : 0);
         PlayerPrefs.Save();
-
-        //ChangeVolume(sliderVolume.value);
-        //ChangeBrightness(sliderBrightness.value);
-        //ChangeMusic(toggleMusic.isOn);
-
-        SceneManager.LoadScene(6);
+        guiScript.returnToMenu();
     }
 }

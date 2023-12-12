@@ -16,8 +16,8 @@ using UnityEngine.InputSystem;
 		public bool interact;
 		public float mouseWheel;
 		public bool use;
-
 		public bool throwObject;
+		public bool shout;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -83,6 +83,11 @@ using UnityEngine.InputSystem;
 		{
 			ThrowObjectInput(value.isPressed);
 		}
+
+		public void OnShout(InputValue value)
+		{
+			ShoutInput(value.isPressed);
+		}
 #endif
 
 
@@ -138,6 +143,11 @@ using UnityEngine.InputSystem;
 		public void ThrowObjectInput(bool newThrowState)
 		{
 			throwObject = newThrowState;
+		}
+
+		public void ShoutInput(bool newShoutState)
+		{
+			shout = newShoutState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
