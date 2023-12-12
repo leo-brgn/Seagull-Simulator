@@ -13,10 +13,17 @@ public class configScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioMixer audioMixer;
 
+    public GUIScript guiScript;
+
     public void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-
+        float volume = audioMixer.GetFloat("Volume", out float volumeValue) ? volumeValue : 1f;
+        // Transform from logarithmic to linear
+        float normalizedVolume = Mathf.Pow(10f, volume / 20f);
+        float sliderVolumeValue = normalizedVolume * 100f;
+        PlayerPrefs.SetFloat("Volume", sliderVolumeValue);
+        PlayerPrefs.SetFloat("Brightness", Screen.brightness);
+        PlayerPrefs.SetInt("Music", audioSource.isPlaying ? 1 : 0);
         sliderVolume.value = PlayerPrefs.GetFloat("Volume", 1f);
         sliderBrightness.value = PlayerPrefs.GetFloat("Brightness", 1f);
         toggleMusic.isOn = PlayerPrefs.GetInt("Music", 1) == 1;
@@ -32,7 +39,6 @@ public class configScript : MonoBehaviour
         newVolume = Mathf.Clamp(newVolume, 0f, 100f);
         float normalizedVolume = newVolume / 100f;
         float logarithmicVolume = Mathf.Log10(normalizedVolume) * 20;
-
         audioMixer.SetFloat("Volume", logarithmicVolume);
     }
 
@@ -53,17 +59,13 @@ public class configScript : MonoBehaviour
         }
     }
 
+    // Called when we click the "save" button.
     public void SaveConfig()
     {
         PlayerPrefs.SetFloat("Volume", sliderVolume.value);
         PlayerPrefs.SetFloat("Brightness", sliderBrightness.value);
         PlayerPrefs.SetInt("Music", toggleMusic.isOn ? 1 : 0);
         PlayerPrefs.Save();
-
-        //ChangeVolume(sliderVolume.value);
-        //ChangeBrightness(sliderBrightness.value);
-        //ChangeMusic(toggleMusic.isOn);
-
-        SceneManager.LoadScene(6);
+        guiScript.returnToMenu();
     }
 }

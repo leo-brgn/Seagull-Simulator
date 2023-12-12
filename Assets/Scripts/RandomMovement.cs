@@ -10,6 +10,8 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     public float range; //radius of sphere
     public Transform centrePoint; //centre of the area the agent wants to move around in
     public Transform targetAvatar;
+
+    public GameObject seagull;
     public float minDistance = 5f;
 
     public Animator anim; 
@@ -44,6 +46,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
                 transform.rotation = rotation;
                 anim.SetFloat("orizontal", 1);
                 //agent.isStopped = true;
+                seagull.GetComponent<PlayerData>().TakeDamage(1f);
             }
         }
         else

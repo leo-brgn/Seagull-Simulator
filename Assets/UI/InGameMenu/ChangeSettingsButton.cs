@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class settingsButton : MonoBehaviour
 {
-    public int gameStartScene;
-
+    public GUIScript guiScript;
+    
     // Called when we click the "settings" button.
     public void settingsButtonStart()
     {
-        SceneManager.LoadScene(7);
+        guiScript.openSettings();
     }
 }
