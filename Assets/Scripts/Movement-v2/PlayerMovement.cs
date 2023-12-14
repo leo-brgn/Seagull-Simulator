@@ -4,31 +4,32 @@ namespace Movement_v2
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [Header("Movement")] public float moveSpeed;
+        public Rigidbody rb;
+        public Transform orientation;
+        private Vector3 moveDirection;
 
-        public float groundDrag;
-        public float airborneDrag;
+        public float moveSpeedGround;
+        public float moveSpeedGroundSprint;
+        public float moveSpeedAir;
 
         public float jumpForce;
-        public float airMultiplier;
 
-        [HideInInspector] public float walkSpeed;
-        [HideInInspector] public float sprintSpeed;
 
-        [Header("Keybinds")] public KeyCode jumpKey = KeyCode.Space;
+        [HideInInspector] public bool grounded;
+        [HideInInspector] public bool flyMode;
 
-        [Header("Ground Check")] public float playerHeight;
-        public LayerMask whatIsGround;
-        public bool grounded;
 
-        public Transform orientation;
+        // Jump/ Take-Off Mechanics
+        [HideInInspector] public int spacePressCount = 0;
+
+        [HideInInspector] public float lastSpacePressTime = 0f;
+
+        // prevent multiple jumps when space is held more than one frame
+        [HideInInspector] private bool spacePressedThisFrame = false;
+
 
         private float horizontalInput;
         private float verticalInput;
-
-        private Vector3 moveDirection;
-
-        public Rigidbody rb;
 
 
         private void Start()
@@ -41,11 +42,6 @@ namespace Movement_v2
         {
             MyInput();
             SpeedControl();
-            // handle drag
-            if (grounded)
-                rb.drag = groundDrag;
-            else
-                rb.drag = airborneDrag;
         }
 
         private void FixedUpdate()
@@ -66,7 +62,7 @@ namespace Movement_v2
 
 
             // 3x jumps in 2 sec -> player enters flyMode
-            if (Input.GetKey(jumpKey) && !spacePressedThisFrame)
+            if (Input.GetKey(KeyCode.Space) && !spacePressedThisFrame)
             {
                 // Set the flag to true to indicate that the space key was pressed in this frame
                 spacePressedThisFrame = true;
@@ -108,53 +104,58 @@ namespace Movement_v2
             // on ground
             if (grounded)
             {
-                rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+                rb.AddForce(moveDirection.normalized * moveSpeedGround * 10f, ForceMode.Force);
             }
 
             // in fly mode
             else if (flyMode)
             {
-                moveDirection = orientation.forward * verticalInput; // + orientation.right * horizontalInput;
-
-                // move ↓ : Check if the Shift key is pressed for descending
+                // move ↓ : SHIFT for descending movement
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.down * moveSpeed * 3f, ForceMode.Force);
+                    moveDirection = Vector3.down * moveSpeedAir * 3f;
 
-                // move ↑ : Check if the Space key is pressed for upward movement
+                // move ↑ : SPACE for upward movement
                 if (Input.GetKey(KeyCode.Space))
                     // Set the y-velocity for descent
-                    rb.AddForce(Vector3.up * moveSpeed * 3f, ForceMode.Force);
+                    moveDirection = Vector3.up * moveSpeedAir * 3f;
+
+                rb.AddForce(moveDirection, ForceMode.Force);
 
 
-                // Decelerate when pressing the down key
+                // S for braking
                 if (Input.GetKey(KeyCode.S))
-                    // Interpolate the current velocity towards zero over time
+                {
                     rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 0.03f);
+                }
                 else
+                {
                     // Forward movement only
-                    rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+                    moveDirection = orientation.forward * verticalInput;
+                    rb.AddForce(moveDirection.normalized * moveSpeedAir * 4f, ForceMode.Force);
+                }
             }
-            // when falling (I guess)
+
+            // when falling 
             else if (!grounded)
             {
-                rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+                rb.AddForce(moveDirection.normalized * moveSpeedAir * 4f, ForceMode.Force);
             }
         }
 
         private void SpeedControl()
         {
-            var velocity = rb.velocity;
-            var flatVel = new Vector3(velocity.x, 0f, velocity.z);
-
-            // limit velocity if needed
-            if (flatVel.magnitude > moveSpeed)
-            {
-                var limitedVel = flatVel.normalized * moveSpeed;
-                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            }
-
-            speed = flatVel.magnitude;
+            // var velocity = rb.velocity;
+            // var flatVel = new Vector3(velocity.x, 0f, velocity.z);
+            //
+            // // limit velocity if needed
+            // if (flatVel.magnitude > moveSpeed)
+            // {
+            //     var limitedVel = flatVel.normalized * moveSpeed;
+            //     rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            // }
+            //
+            // speed = flatVel.magnitude;
         }
 
 
@@ -163,18 +164,13 @@ namespace Movement_v2
             if (spacePressCount != 3) rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         }
 
-        // --- Start Fly mechanics ---
-
-        public bool flyMode;
-        public float speed = 0f;
-        public int spacePressCount = 0;
-        public float lastSpacePressTime = 0f;
-
-        // prevent multiple jumps when space is held more than one frame
-        private bool spacePressedThisFrame = false;
 
         private bool GetFlyMode()
         {
+            // Checks if Player is near the ground
+            var groundIsNear = Physics.Raycast(transform.position, Vector3.down, 8f);
+            if (!groundIsNear) return true;
+
             if (grounded) return false;
             return flyMode;
         }

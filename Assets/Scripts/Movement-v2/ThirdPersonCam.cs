@@ -91,12 +91,12 @@ public class ThirdPersonCam : MonoBehaviour
 
             // Push the bird towards the tilt direction
             var tiltForceMultiplier = Math.Abs(tiltAngleRatio) *
-                playerSpeed / playerMovement.moveSpeed;
+                playerSpeed / playerMovement.moveSpeedAir;
             playerMovement.rb.AddForce(playerObj.up * tiltForceMultiplier, ForceMode.Force);
         }
 
         // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeed);
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void SwitchCameraStyle(CameraStyle newStyle)
