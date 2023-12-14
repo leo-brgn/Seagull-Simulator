@@ -61,7 +61,6 @@
      <Compile Include="Assets/UI/InGameMenu/ContinueButton.cs" />
      <Compile Include="Assets/UI/Map/MapScript.cs" />
      <Compile Include="Assets/UI/InGameMenu/saveSettings.cs" />
-     <Compile Include="Assets/Scripts/PlayerMovementController.cs" />
      <Compile Include="Assets/UI/Inventory/MainInventory.cs" />
      <Compile Include="Assets/UI/Inventory/InventorySlot.cs" />
      <Compile Include="Assets/Scripts/Sounds.cs" />
