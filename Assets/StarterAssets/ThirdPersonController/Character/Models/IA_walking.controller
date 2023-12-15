@@ -64,10 +64,10 @@ AnimatorStateMachine:
     m_Position: {x: 244.36258, y: 109.98747, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7321976119800648477}
-    m_Position: {x: 210, y: 220, z: 0}
+    m_Position: {x: 130, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2154576087050127331}
-    m_Position: {x: 510, y: 280, z: 0}
+    m_Position: {x: 420, y: 260, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -75,7 +75,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ExitPosition: {x: 500, y: 40, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2697432721069986935}
 --- !u!1101 &-2796217405056177211
@@ -138,7 +138,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Seagull Tree
+  m_Name: Seagull_is_near
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
