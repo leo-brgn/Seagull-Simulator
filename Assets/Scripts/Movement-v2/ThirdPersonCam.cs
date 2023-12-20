@@ -90,7 +90,7 @@ public class ThirdPersonCam : MonoBehaviour
             playerObj.Rotate(Vector3.forward, tiltAngleRatio);
 
             // Push the bird towards the tilt direction
-            var tiltForceMultiplier = Math.Abs(tiltAngleRatio) *
+            var tiltForceMultiplier = Math.Abs(tiltAngleRatio * 0.7f) *
                 playerSpeed / playerMovement.moveSpeedAir;
             playerMovement.rb.AddForce(playerObj.up * tiltForceMultiplier, ForceMode.Force);
         }
