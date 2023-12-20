@@ -31,27 +31,59 @@ namespace Movement_v2
         private float horizontalInput;
         private float verticalInput;
 
+        private int _animIDGroundedSpeed;
+        private int _animIDGroundedMotionSpeed;
+        private int _animIDFlyingSpeed;
+        private int _animIDJump;
+        private int _animIDFall;
+        private int _animIDFly;
+        private int _animIDFlySpeed;
+        private int _animIDGrounded;
+
+        private Animator _animator;
+
 
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
+
+            AssignAnimationIDs();
+            _animator = GetComponent<Animator>();
+        }
+
+        private void AssignAnimationIDs()
+        {
+            _animIDGroundedSpeed = Animator.StringToHash("groundedSpeed");
+            _animIDGroundedMotionSpeed = Animator.StringToHash("groundedMotionSpeed");
+            _animIDFlyingSpeed = Animator.StringToHash("flyingSpeed");
+            _animIDJump = Animator.StringToHash("isJumping");
+            _animIDFly = Animator.StringToHash("isFlying");
+            _animIDGrounded = Animator.StringToHash("isGrounded");
         }
 
         private void Update()
         {
             MyInput();
             SpeedControl();
+            flyMode = GetFlyMode();
+
+            // TODO: go in fly mode when ground is more than 10m down with RayCast
+            // ground check
+            grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
+            if (grounded)
+            {
+                _animator.SetBool(_animIDFly, false);
+                _animator.SetBool(_animIDGrounded, true);
+            }
+            else
+            {
+                _animator.SetBool(_animIDGrounded, false);
+            }
         }
 
         private void FixedUpdate()
         {
-            // TODO: go in fly mode when ground is more than 10m down with RayCast
-            // ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
-            // check flyMode
-            flyMode = GetFlyMode();
-
             MovePlayer();
         }
 
@@ -62,15 +94,13 @@ namespace Movement_v2
 
 
             // 3x jumps in 2 sec -> player enters flyMode
-            if (Input.GetKey(KeyCode.Space) && !spacePressedThisFrame)
+            if (!flyMode && Input.GetKey(KeyCode.Space) && !spacePressedThisFrame)
             {
                 // Set the flag to true to indicate that the space key was pressed in this frame
                 spacePressedThisFrame = true;
-
                 Jump();
 
-                // --- Check for take-off ---
-
+                // --- Check for take-off (3x Space in last 2 secs) ---
                 // Check the time since the last space press
                 var currentTime = Time.time;
                 // If it's been less than 2 seconds since the last press, increment the count
@@ -88,6 +118,10 @@ namespace Movement_v2
                 // Update the last space press time
                 lastSpacePressTime = currentTime;
             }
+            else
+            {
+                _animator.SetBool(_animIDJump, false);
+            }
 
             // Check if the space key is released to reset the flag
             if (Input.GetKeyUp(KeyCode.Space)) spacePressedThisFrame = false;
@@ -104,12 +138,22 @@ namespace Movement_v2
             // on ground
             if (grounded)
             {
+                // Remove fly
+                _animator.SetBool(_animIDFly, false);
+                _animator.SetFloat(_animIDGroundedSpeed, moveSpeedGround);
                 rb.AddForce(moveDirection.normalized * moveSpeedGround * 10f, ForceMode.Force);
             }
 
             // in fly mode
             else if (flyMode)
             {
+                // Remove jump
+                _animator.SetBool(_animIDJump, false);
+                // Add fly
+                _animator.SetBool(_animIDFly, true);
+                // Add the speed
+                _animator.SetFloat(_animIDFlyingSpeed, moveSpeedAir);
+
                 // move ↓ : SHIFT for descending movement
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     // Set the y-velocity for descent
@@ -161,7 +205,11 @@ namespace Movement_v2
 
         private void Jump()
         {
-            if (spacePressCount != 3) rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+            if (spacePressCount != 3)
+            {
+                rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+                _animator.SetBool(_animIDJump, true);
+            }
         }
 
 

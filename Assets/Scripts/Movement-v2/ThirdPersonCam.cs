@@ -13,16 +13,14 @@ public class ThirdPersonCam : MonoBehaviour
     public float minTiltAngle = -75f;
     public float tiltSpeed = 5f;
 
-
-    [Header("References")] public Transform orientation;
-    public Transform player;
-    public Transform playerObj;
     public PlayerMovement playerMovement;
 
     public GameObject basicCam;
     public GameObject flyCam;
 
     public CameraStyle currentStyle;
+
+    private float playerSpeed;
 
     public enum CameraStyle
     {
@@ -40,23 +38,29 @@ public class ThirdPersonCam : MonoBehaviour
     private void Update()
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
+        playerSpeed = playerMovement.rb.velocity.magnitude;
 
-        var playerSpeed = playerMovement.rb.velocity.magnitude;
 
+        // Sense of Speed
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
+    }
 
+    private void LateUpdate()
+    {
+        // Sense of Speed
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
+    }
+
+    private void FixedUpdate()
+    {
         if (currentStyle == CameraStyle.Basic)
         {
             // rotate orientation
             var transformPosition = transform.position;
-            var playerPosition = player.position;
-            // The purpose is to get a horizontal direction vector that represents
-            // where the camera is pointing relative to the player, ignoring any vertical offset.
+            var playerPosition = playerMovement.transform.position;
             var viewDir = playerPosition - new Vector3(transformPosition.x, playerPosition.y, transformPosition.z);
-
-
             // Set player orientation
-            orientation.forward = viewDir.normalized;
-            playerObj.forward = viewDir.normalized;
+            playerMovement.transform.forward = viewDir.normalized;
         }
 
         else if (currentStyle == CameraStyle.Fly)
@@ -64,8 +68,7 @@ public class ThirdPersonCam : MonoBehaviour
             // Rotate the player's orientation based on the camera's forward direction
             var forward = transform.forward;
             var direction = new Vector3(forward.x, forward.y * 0.9f, forward.z);
-            playerObj.forward = direction;
-            orientation.forward = direction;
+            playerMovement.transform.forward = direction;
 
 
             var horizontalInput = Input.GetAxis("Horizontal");
@@ -85,16 +88,14 @@ public class ThirdPersonCam : MonoBehaviour
 
             // Apply the new tilt angle to the camera's rig
             freeLookCamera.m_Lens.Dutch = tiltAngleRatio;
-            playerObj.Rotate(Vector3.forward, tiltAngleRatio);
+            // playerObj.Rotate(Vector3.forward, tiltAngleRatio);
+            playerMovement.transform.Rotate(Vector3.forward, tiltAngleRatio);
 
             // Push the bird towards the tilt direction
             var tiltForceMultiplier = Math.Abs(tiltAngleRatio * 0.7f) *
                 playerSpeed / playerMovement.moveSpeedAir;
-            playerMovement.rb.AddForce(playerObj.up * tiltForceMultiplier, ForceMode.Force);
+            playerMovement.rb.AddForce(playerMovement.transform.up * tiltForceMultiplier, ForceMode.Force);
         }
-
-        // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void SwitchCameraStyle(CameraStyle newStyle)

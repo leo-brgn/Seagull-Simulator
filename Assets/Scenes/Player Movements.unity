@@ -2174,7 +2174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9015300388042810541, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3116,7 +3116,7 @@ MonoBehaviour:
   orientation: {fileID: 1859103023}
   moveSpeedGround: 15
   moveSpeedGroundSprint: 25
-  moveSpeedAir: 35
+  moveSpeedAir: 0
   jumpForce: 45
   grounded: 0
   flyMode: 0
