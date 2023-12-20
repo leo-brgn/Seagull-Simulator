@@ -41,9 +41,7 @@ public class ThirdPersonCam : MonoBehaviour
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
 
-        var playerVelocity = playerMovement.rb.velocity;
-        var playerSpeed = Mathf.Max(Mathf.Abs(playerVelocity.x), Mathf.Abs(playerVelocity.y),
-            Mathf.Abs(playerVelocity.z));
+        var playerSpeed = playerMovement.rb.velocity.magnitude;
 
 
         if (currentStyle == CameraStyle.Basic)
