@@ -4,7 +4,7 @@ namespace Movement_v2
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public Rigidbody rb;
+        [HideInInspector] public Rigidbody rb;
         public Transform orientation;
         private Vector3 moveDirection;
 
