@@ -50,6 +50,7 @@ namespace Movement_v2
 
             AssignAnimationIDs();
             _animator = GetComponent<Animator>();
+            _animator.SetBool(_animIDFly, true);
         }
 
         private void AssignAnimationIDs()
@@ -153,6 +154,10 @@ namespace Movement_v2
                 _animator.SetBool(_animIDFly, true);
                 // Add the speed
                 _animator.SetFloat(_animIDFlyingSpeed, moveSpeedAir);
+                if (moveDirection.y > 0)
+                    _animator.SetFloat(_animIDFlyingSpeed, moveSpeedAir);
+                else
+                    _animator.SetFloat(_animIDFlyingSpeed, 0);
 
                 // move ↓ : SHIFT for descending movement
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))

@@ -39,16 +39,12 @@ public class ThirdPersonCam : MonoBehaviour
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
         playerSpeed = playerMovement.rb.velocity.magnitude;
-
-
-        // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void LateUpdate()
     {
         // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 70, playerSpeed / playerMovement.moveSpeedAir);
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 65, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void FixedUpdate()
