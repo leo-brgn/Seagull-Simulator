@@ -69,6 +69,12 @@
         "com.unity.testtools.codecoverage": "1.2.4"
       }
     },
+    "com.unity.hlod": {
+      "version": "file:/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.ide.rider": {
       "version": "3.0.24",
       "depth": 1,
