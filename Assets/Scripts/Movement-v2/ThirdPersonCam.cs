@@ -77,7 +77,7 @@ public class ThirdPersonCam : MonoBehaviour
             var currentTiltAngle = freeLookCamera.m_Lens.Dutch;
 
             // Calculate the new tilt angle based on input
-            var tiltAngleRatio = currentTiltAngle - horizontalInput * tiltSpeed * Time.deltaTime;
+            var tiltAngleRatio = currentTiltAngle - horizontalInput * tiltSpeed;
 
             // If no input is given, smoothly rotate back to zero
             if (Mathf.Approximately(horizontalInput, 0f))
