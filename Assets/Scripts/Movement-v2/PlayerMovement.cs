@@ -27,12 +27,16 @@ namespace Movement_v2
         // prevent multiple jumps when space is held more than one frame
         [HideInInspector] private bool spacePressedThisFrame = false;
 
+        [SerializeField] private GameObject stepRayUpper;
+        [SerializeField] private GameObject stepRayLower;
+        [SerializeField] private float stepHeight = 0.3f;
+        [SerializeField] private float stepSmooth = 2f;
+
 
         private float horizontalInput;
         private float verticalInput;
 
         private int _animIDGroundedSpeed;
-        private int _animIDGroundedMotionSpeed;
         private int _animIDFlyingSpeed;
         private int _animIDJump;
         private int _animIDFall;
@@ -42,10 +46,17 @@ namespace Movement_v2
 
         private Animator _animator;
 
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody>();
+
+            stepRayUpper.transform.position = new Vector3(stepRayUpper.transform.position.x, stepHeight,
+                stepRayUpper.transform.position.z);
+        }
+
 
         private void Start()
         {
-            rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
 
             AssignAnimationIDs();
@@ -56,7 +67,6 @@ namespace Movement_v2
         private void AssignAnimationIDs()
         {
             _animIDGroundedSpeed = Animator.StringToHash("groundedSpeed");
-            _animIDGroundedMotionSpeed = Animator.StringToHash("groundedMotionSpeed");
             _animIDFlyingSpeed = Animator.StringToHash("flyingSpeed");
             _animIDJump = Animator.StringToHash("isJumping");
             _animIDFly = Animator.StringToHash("isFlying");
@@ -66,7 +76,6 @@ namespace Movement_v2
         private void Update()
         {
             MyInput();
-            SpeedControl();
             flyMode = GetFlyMode();
 
             // ground check
@@ -85,6 +94,7 @@ namespace Movement_v2
         private void FixedUpdate()
         {
             MovePlayer();
+            stepClimb();
         }
 
         private void MyInput()
@@ -193,21 +203,6 @@ namespace Movement_v2
             }
         }
 
-        private void SpeedControl()
-        {
-            // var velocity = rb.velocity;
-            // var flatVel = new Vector3(velocity.x, 0f, velocity.z);
-            //
-            // // limit velocity if needed
-            // if (flatVel.magnitude > moveSpeed)
-            // {
-            //     var limitedVel = flatVel.normalized * moveSpeed;
-            //     rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            // }
-            //
-            // speed = flatVel.magnitude;
-        }
-
 
         private void Jump()
         {
@@ -227,6 +222,37 @@ namespace Movement_v2
 
             if (grounded) return false;
             return flyMode;
+        }
+
+        private void stepClimb()
+        {
+            RaycastHit hitLower;
+            if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward),
+                    out hitLower, 0.75f))
+            {
+                RaycastHit hitUpper;
+                if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward),
+                        out hitUpper, 1f)) rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+
+            RaycastHit hitLower45;
+            if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(1.5f, 0, 1),
+                    out hitLower45, 0.5f))
+            {
+                RaycastHit hitUpper45;
+                if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(1.5f, 0, 1),
+                        out hitUpper45, 1f)) rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+
+            RaycastHit hitLowerMinus45;
+            if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(-1.5f, 0, 1),
+                    out hitLowerMinus45, 0.5f))
+            {
+                RaycastHit hitUpperMinus45;
+                if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(-1.5f, 0, 1),
+                        out hitUpperMinus45, 1f))
+                    rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
         }
     }
 }

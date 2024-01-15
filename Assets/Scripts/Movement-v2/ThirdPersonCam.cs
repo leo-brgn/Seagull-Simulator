@@ -43,7 +43,7 @@ public class ThirdPersonCam : MonoBehaviour
     private void LateUpdate()
     {
         // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 60, playerSpeed / playerMovement.moveSpeedAir);
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(30, 60, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void FixedUpdate()
