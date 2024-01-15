@@ -70,7 +70,7 @@
       }
     },
     "com.unity.hlod": {
-      "version": "file:/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod",
+      "version": "file:/Users/julian/Dev/HLODSystem/com.unity.hlod",
       "depth": 0,
       "source": "local",
       "dependencies": {}
