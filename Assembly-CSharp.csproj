@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_3_3;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;ENABLE_UNITYMESHSIMPLIFIER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_3;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -40,98 +40,9 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.18</UnityProjectGeneratorVersion>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-    <UnityVersion>2022.3.3f1</UnityVersion>
-  </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
-    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\saveSettings.cs" />
-    <Compile Include="Assets\UI\StartMenu\playButton.cs" />
-    <Compile Include="Assets\UI\Inventory\Items\Interactable.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\Megumi2\Script\New\ThirdPerson.cs" />
-    <Compile Include="Assets\UI\InGameMenu\ChangeSettingsButton.cs" />
-    <Compile Include="Assets\UI\StartMenu\mainMenuButton.cs" />
-    <Compile Include="Assets\Scripts\PlayerData.cs" />
-    <Compile Include="Assets\StartMenu\playButton.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\Megumi2\Script\New\PlayerBasicCode.cs" />
-    <Compile Include="Assets\UI\StartMenu\ScrollScript.cs" />
-    <Compile Include="Assets\StartMenu\ScrollScript.cs" />
-    <Compile Include="Assets\StartMenu\backButton.cs" />
-    <Compile Include="Assets\UI\GUIScript.cs" />
-    <Compile Include="Assets\UI\StartMenu\backButton.cs" />
-    <Compile Include="Assets\Scripts\RandomMovement.cs" />
-    <Compile Include="Assets\ChangeSettingsButton.cs" />
-    <Compile Include="Assets\UI\InGameMenu\ContinueButton.cs" />
-    <Compile Include="Assets\UI\Map\MapScript.cs" />
-    <Compile Include="Assets\ContinueButton.cs" />
-    <Compile Include="Assets\UI\Inventory\Item.cs" />
-    <Compile Include="Assets\UI\InGameMenu\saveSettings.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
-    <Compile Include="Assets\UI\Inventory\MainInventory.cs" />
-    <Compile Include="Assets\UI\Inventory\InventorySlot.cs" />
-    <Compile Include="Assets\Scripts\Sounds.cs" />
-    <Compile Include="Assets\UI\InGameMenu\SaveLoadGame.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\source\Megumi2\Megumi2\Script\New\ThirdPerson.cs" />
-    <Compile Include="Assets\SimpleCloudSystem by RM\SCS.cs" />
-    <Compile Include="Assets\Scripts\Quests.cs" />
-    <Compile Include="Assets\Scripts\Splash_text.cs" />
-    <Compile Include="Assets\UI\Inventory\InventoryItem.cs" />
-    <Compile Include="Assets\StartMenu\exitButton.cs" />
-    <Compile Include="Assets\InputSystem\SeagullInputs.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\Megumi2\Script\New\PlayerMoveCode.cs" />
-    <Compile Include="Assets\UI\StartMenu\exitButton.cs" />
-    <Compile Include="Assets\UI\Inventory\Interactable.cs" />
-    <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
-    <Compile Include="Assets\StartMenu\MenuScript.cs" />
-    <Compile Include="Assets\UI\Inventory\Items\Item.cs" />
-    <Compile Include="Assets\Scripts\Quest.cs" />
-    <Compile Include="Assets\UI\Inventory\InventoryManager.cs" />
-    <Compile Include="Assets\UI\StartMenu\creditsButton.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\source\Megumi2\Megumi2\Script\New\PlayerBasicCode.cs" />
-    <Compile Include="Assets\UI\StartMenu\MenuScript.cs" />
-    <Compile Include="Assets\Scripts\BasicRigidBodyPush.cs" />
-    <Compile Include="Assets\SaveLoadGame.cs" />
-    <Compile Include="Assets\StarterAssets\anime-charactermegumi\source\Megumi2\Megumi2\Script\New\PlayerMoveCode.cs" />
-    <Compile Include="Assets\StartMenu\creditsButton.cs" />
-    <Compile Include="Assets\Scripts\Splash_img.cs" />
-    <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\StarterAssets\AnimeGirls\BaseCharacter\BaseCharacter\Sourcefiles\Shader\DoubleSided.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\StarterAssets\AnimeGirls\BaseCharacter\BaseCharacter\Sourcefiles\Shader\UnlitColor.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\SimpleCloudSystem by RM\SCS Instructions.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\SimpleCloudSystem by RM\Read Me.txt" />
-    <None Include="Assets\TerrainSampleAssets\ShaderGraphs\CustomFunctions\CustomLighting.hlsl" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
+    <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/UI/StartMenu/playButton.cs" />
@@ -141,6 +52,8 @@
      <Compile Include="Assets/UI/StartMenu/mainMenuButton.cs" />
      <Compile Include="Assets/Scripts/PlayerData.cs" />
      <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/PlayerBasicCode.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/PlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/DebugUI.cs" />
      <Compile Include="Assets/UI/StartMenu/ScrollScript.cs" />
      <Compile Include="Assets/UI/GUIScript.cs" />
      <Compile Include="Assets/UI/StartMenu/backButton.cs" />
@@ -167,6 +80,7 @@
      <Compile Include="Assets/UI/StartMenu/creditsButton.cs" />
      <Compile Include="Assets/UI/StartMenu/MenuScript.cs" />
      <Compile Include="Assets/Scripts/BasicRigidBodyPush.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/ThirdPersonCam.cs" />
      <Compile Include="Assets/Scripts/Splash_img.cs" />
      <Compile Include="Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
      <Folder Include="Assets" />
@@ -208,7 +122,6 @@
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds/SunnyClouds_Materials" />
      <Folder Include="Assets/Textures" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
-     <Folder Include="/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod/Package/UnityMeshSimplifier" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New" />
      <Folder Include="Assets/UI/Inventory/Items/Materials" />
@@ -225,7 +138,6 @@
      <Folder Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Texture" />
      <Folder Include="Assets/Scenes/Environment" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod" />
      <None Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter/Sourcefiles/Shader/DoubleSided.shader" />
      <Folder Include="Assets/StarterAssets/indian-man-in-suit/textures" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Train Assets" />
@@ -268,11 +180,9 @@
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Sfx" />
      <Folder Include="Assets/StarterAssets/AnimeGirls/BaseCharacter/BaseCharacter" />
      <Folder Include="Assets/StarterAssets/ThirdPersonController/Character/Models" />
-     <Folder Include="/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod/Tests" />
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds/DarkClouds_Materials/DarkClouds_Textures" />
      <Folder Include="Assets/TerrainSampleAssets/Materials" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
-     <None Include="/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod/package.json" />
      <Folder Include="Assets/TerrainSampleAssets/Settings" />
      <Folder Include="Assets/Idyllic Anime Japan/Materials/Misc" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
@@ -289,7 +199,6 @@
      <Folder Include="Assets/Models/Lowpoly Toon Cat Lite/Model/Materials" />
      <Folder Include="Assets/SimpleCloudSystem by RM/Clouds/SunnyClouds_Materials/SunnyClouds_Textures" />
      <Folder Include="Assets/Sounds/Sfx/Landing" />
-     <Folder Include="/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod/Package" />
      <Folder Include="Assets/TerrainSampleAssets/Textures" />
      <Folder Include="Assets/SimpleCloudSystem by RM" />
      <Folder Include="Assets/Idyllic Anime Japan/Prefabs/Props" />
@@ -301,6 +210,7 @@
      <Folder Include="Assets/Idyllic Anime Japan/Materials/Textures" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/Idyllic Anime Japan" />
+     <Folder Include="Assets/Scripts/Movement-v2" />
      <Folder Include="Assets/SimpleCloudSystem by RM/SceneComponents" />
      <Folder Include="Assets/Idyllic Anime Japan/FBX Files/Modular" />
      <Folder Include="Assets/Animation" />
@@ -582,10 +492,10 @@
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.3f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -968,176 +878,148 @@
      <Reference Include="mscorlib">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.3f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AI.Navigation">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AutoLOD">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AutoLOD.dll</HintPath>
-     </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AutoLOD.Editor.Simplygon">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AutoLOD.Editor.Simplygon.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem.ForUI">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AI.Navigation.Updater">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AutoLOD.Editor">
-     <HintPath>/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/Seagull-Simulator/Library/ScriptAssemblies/Unity.AutoLOD.Editor.dll</HintPath>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>/Users/julian/Dev/Seagull-Simulator/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="HLODEditor.csproj">
-      <Project>{d7d9124e-8a7f-e949-d464-b45bf4cbdd85}</Project>
-      <Name>HLODEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityMeshSimplifier.csproj">
-      <Project>{21624035-5a88-d2eb-f1e1-f611a3de1325}</Project>
-      <Name>UnityMeshSimplifier</Name>
-    </ProjectReference>
-    <ProjectReference Include="HLOD.csproj">
-      <Project>{e27006ba-c0f9-4aeb-3ed6-a0a17f6ff7bd}</Project>
-      <Name>HLOD</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
