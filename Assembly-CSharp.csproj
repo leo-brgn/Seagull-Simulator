@@ -52,6 +52,8 @@
      <Compile Include="Assets/UI/StartMenu/mainMenuButton.cs" />
      <Compile Include="Assets/Scripts/PlayerData.cs" />
      <Compile Include="Assets/StarterAssets/anime-charactermegumi/Megumi2/Script/New/PlayerBasicCode.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/PlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/DebugUI.cs" />
      <Compile Include="Assets/UI/StartMenu/ScrollScript.cs" />
      <Compile Include="Assets/UI/GUIScript.cs" />
      <Compile Include="Assets/UI/StartMenu/backButton.cs" />
@@ -78,6 +80,7 @@
      <Compile Include="Assets/UI/StartMenu/creditsButton.cs" />
      <Compile Include="Assets/UI/StartMenu/MenuScript.cs" />
      <Compile Include="Assets/Scripts/BasicRigidBodyPush.cs" />
+     <Compile Include="Assets/Scripts/Movement-v2/ThirdPersonCam.cs" />
      <Compile Include="Assets/Scripts/Splash_img.cs" />
      <Compile Include="Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
      <Folder Include="Assets" />
