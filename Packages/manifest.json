@@ -1,15 +1,18 @@
 {
   "dependencies": {
     "com.unity.ai.navigation": "1.1.5",
+    "com.unity.autolod": "https://github.com/Unity-Technologies/AutoLOD.git",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.0.7",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.hlod": "file:/Users/leobrignone/Documents/UPV/EVI/Seagull-Game/HLODSystem/com.unity.hlod",
     "com.unity.inputsystem": "1.6.3",
     "com.unity.render-pipelines.universal": "14.0.8",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
+    "com.whinarn.unitymeshsimplifier": "https://github.com/Whinarn/UnityMeshSimplifier.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
