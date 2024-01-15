@@ -69,7 +69,6 @@ namespace Movement_v2
             SpeedControl();
             flyMode = GetFlyMode();
 
-            // TODO: go in fly mode when ground is more than 10m down with RayCast
             // ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, 0.75f);
             if (grounded)
@@ -142,7 +141,9 @@ namespace Movement_v2
                 // Remove fly
                 _animator.SetBool(_animIDFly, false);
                 _animator.SetFloat(_animIDGroundedSpeed, moveSpeedGround);
-                rb.AddForce(moveDirection.normalized * moveSpeedGround * 10f, ForceMode.Force);
+
+                var groundSpeed = 10f * (Input.GetKey(KeyCode.LeftShift) ? moveSpeedGroundSprint : moveSpeedGround);
+                rb.AddForce(moveDirection.normalized * groundSpeed, ForceMode.Force);
             }
 
             // in fly mode
@@ -181,7 +182,7 @@ namespace Movement_v2
                 {
                     // Forward movement only
                     moveDirection = orientation.forward * verticalInput;
-                    rb.AddForce(moveDirection.normalized * moveSpeedAir * 4f, ForceMode.Force);
+                    rb.AddForce(moveDirection.normalized * moveSpeedAir, ForceMode.Force);
                 }
             }
 

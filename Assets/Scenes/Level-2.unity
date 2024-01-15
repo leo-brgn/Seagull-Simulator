@@ -1135,6 +1135,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6459187085587447019, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459187085587447019, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: moveSpeedAir
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459187085587447019, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: moveSpeedGround
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459187085587447019, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
+      propertyPath: moveSpeedGroundSprint
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6515884903835350120, guid: 3f8e99c09b55b4cfdb84399710254b48, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

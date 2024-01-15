@@ -34,7 +34,6 @@ public class ThirdPersonCam : MonoBehaviour
         Cursor.visible = false;
     }
 
-    // TODO: TitlAngle relative to playerSpeed
     private void Update()
     {
         SwitchCameraStyle(playerMovement.flyMode ? CameraStyle.Fly : CameraStyle.Basic);
@@ -44,7 +43,7 @@ public class ThirdPersonCam : MonoBehaviour
     private void LateUpdate()
     {
         // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 65, playerSpeed / playerMovement.moveSpeedAir);
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 60, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void FixedUpdate()
