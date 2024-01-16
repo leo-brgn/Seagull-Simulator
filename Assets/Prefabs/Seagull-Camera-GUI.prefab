@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7728666877806310944}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -2011,6 +2011,7 @@ MonoBehaviour:
   stepRayLower: {fileID: 8296597580714181414}
   stepHeight: 0.3
   stepSmooth: 2
+  playerData: {fileID: 0}
 --- !u!54 &2330667145637389020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2238,8 +2239,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6002700540629192229}
   - {fileID: 1824158006007066399}
+  - {fileID: 6002700540629192229}
   - {fileID: 2541526194179159156}
   - {fileID: 746442026565141609}
   m_Father: {fileID: 0}
@@ -2992,6 +2993,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6459559455016130314, guid: 9099bfb9edf054a02a3a194e3b01431b, type: 3}
+      propertyPath: _seagull
+      value: 
+      objectReference: {fileID: 7728666877806310944}
     - target: {fileID: 6708910535927367037, guid: 9099bfb9edf054a02a3a194e3b01431b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
