@@ -43,7 +43,7 @@ public class ThirdPersonCam : MonoBehaviour
     private void LateUpdate()
     {
         // Sense of Speed
-        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(30, 60, playerSpeed / playerMovement.moveSpeedAir);
+        freeLookCamera.m_Lens.FieldOfView = Mathf.Lerp(50, 65, playerSpeed / playerMovement.moveSpeedAir);
     }
 
     private void FixedUpdate()
@@ -105,7 +105,7 @@ public class ThirdPersonCam : MonoBehaviour
         flyCam.SetActive(false);
 
         if (newStyle == CameraStyle.Basic) basicCam.SetActive(true);
-        if (newStyle == CameraStyle.Fly) basicCam.SetActive(true);
+        if (newStyle == CameraStyle.Fly) flyCam.SetActive(true);
 
         currentStyle = newStyle;
     }
