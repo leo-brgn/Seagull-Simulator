@@ -14,20 +14,20 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     public GameObject seagull;
     public float minDistance = 5f;
 
-    public Animator anim; 
-    
-    void Start()
+    public Animator anim;
+
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim.SetFloat("vertical", 0);
         //anim.SetFloat("orizontal", 1);
     }
 
-    
-    void Update()
+
+    private void Update()
     {
         // Check the distance between this object and the target avatar
-        float distance = Vector3.Distance(agent.transform.position, targetAvatar.position);
+        var distance = Vector3.Distance(agent.transform.position, targetAvatar.position);
 
         // If the distance is less than the minimum distance, perform the desired actions
         if (distance < minDistance)
@@ -41,25 +41,21 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             }
             else
             {
-                Vector3 directionToTarget = targetAvatar.position - transform.position;
-                Quaternion rotation = Quaternion.LookRotation(directionToTarget, Vector3.up);
+                var directionToTarget = targetAvatar.position - transform.position;
+                var rotation = Quaternion.LookRotation(directionToTarget, Vector3.up);
                 transform.rotation = rotation;
                 anim.SetFloat("orizontal", 1);
                 //agent.isStopped = true;
-                seagull.GetComponent<PlayerData>().TakeDamage(1f);
+                seagull.GetComponent<PlayerData>().TakeDamage(0.2f);
             }
         }
         else
         {
             anim.SetFloat("orizontal", 0);
             if (agent.velocity.magnitude > 0)
-            {
                 anim.SetFloat("vertical", 1);
-            }
             else
-            {
                 anim.SetFloat("vertical", 0);
-            }
 
             if (agent.isStopped || agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -73,23 +69,21 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
                 }
             }
         }
-
-        
-
-        
     }
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+
+    private bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
+        var randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
-        { 
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f,
+                NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
+        {
             //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
             //or add a for loop like in the documentation
             result = hit.position;
             return true;
         }
-        
+
         result = Vector3.zero;
         return false;
     }
@@ -109,9 +103,4 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
         anim.SetFloat("orizontal", 2);
     }
     */
-    
-
-
-
-
 }
