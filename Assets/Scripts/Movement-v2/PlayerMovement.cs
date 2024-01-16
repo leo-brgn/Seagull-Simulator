@@ -46,9 +46,12 @@ namespace Movement_v2
 
         private Animator _animator;
 
+        public PlayerData playerData;
+
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            playerData = gameObject.GetComponent<PlayerData>();
 
             stepRayUpper.transform.position = new Vector3(stepRayUpper.transform.position.x, stepHeight,
                 stepRayUpper.transform.position.z);
@@ -154,6 +157,10 @@ namespace Movement_v2
 
                 var groundSpeed = 10f * (Input.GetKey(KeyCode.LeftShift) ? moveSpeedGroundSprint : moveSpeedGround);
                 rb.AddForce(moveDirection.normalized * groundSpeed, ForceMode.Force);
+
+
+                // RUN : SHIFT for descending movement
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) playerData.RunStamina();
             }
 
             // in fly mode
@@ -166,9 +173,14 @@ namespace Movement_v2
                 // Add the speed
                 _animator.SetFloat(_animIDFlyingSpeed, moveSpeedAir);
                 if (moveDirection.y > 0)
+                {
                     _animator.SetFloat(_animIDFlyingSpeed, moveSpeedAir);
+                    playerData.RunStamina();
+                }
                 else
+                {
                     _animator.SetFloat(_animIDFlyingSpeed, 0);
+                }
 
                 // move ↓ : SHIFT for descending movement
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
