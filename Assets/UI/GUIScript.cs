@@ -8,7 +8,8 @@ public class GUIScript : MonoBehaviour
     public GameObject settingsCanvas;
     public GameObject seagull;
 
-    void Awake() {
+    private void Awake()
+    {
         // Get canvas called "GameMenu"
         if (gameMenuCanvas == null)
         {
@@ -19,6 +20,7 @@ public class GUIScript : MonoBehaviour
                 return;
             }
         }
+
         // Get canvas called "Settings"
         if (settingsCanvas == null)
         {
@@ -28,7 +30,8 @@ public class GUIScript : MonoBehaviour
                 Debug.LogError("Could not find canvas called 'Settings'");
                 return;
             }
-        }  
+        }
+
         if (seagull == null)
         {
             seagull = GameObject.Find("Seagull");
@@ -40,20 +43,18 @@ public class GUIScript : MonoBehaviour
         }
     }
 
-    void Start() {
+    private void Start()
+    {
         // Set both to inactive
         settingsCanvas.SetActive(false);
         gameMenuCanvas.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!openMenu()) {
+            if (!openMenu())
                 closeMenu();
-            }
-        }
     }
 
     public bool openSettings()
@@ -63,6 +64,7 @@ public class GUIScript : MonoBehaviour
             Debug.LogError("Game menu canvas is not active");
             return false;
         }
+
         // Activate the settings canvas
         settingsCanvas.SetActive(true);
         // Deactivate the in-game menu canvas
@@ -70,28 +72,25 @@ public class GUIScript : MonoBehaviour
         return true;
     }
 
-    public bool openMenu() {
-        if (settingsCanvas.activeSelf)
-        {
-            return false;
-        }
-        if (gameMenuCanvas.activeSelf)
-        {
-            return false;
-        }
+    public bool openMenu()
+    {
+        if (settingsCanvas.activeSelf) return false;
+        if (gameMenuCanvas.activeSelf) return false;
         gameMenuCanvas.SetActive(true);
         settingsCanvas.SetActive(false);
         Time.timeScale = 0;
-        deactivateMouseCursor();
+        activateMouseCursor();
         return true;
     }
 
-    public bool returnToMenu() {
+    public bool returnToMenu()
+    {
         if (!settingsCanvas.activeSelf)
         {
             Debug.LogError("Settings canvas is not active");
             return false;
         }
+
         // Deactivate the settings canvas
         settingsCanvas.SetActive(false);
         // Activate the in-game menu canvas
@@ -99,28 +98,30 @@ public class GUIScript : MonoBehaviour
         return true;
     }
 
-    public bool closeMenu() {
+    public bool closeMenu()
+    {
         if (!gameMenuCanvas.activeSelf)
         {
             Debug.LogError("Game menu canvas is not active");
             return false;
         }
+
         gameMenuCanvas.SetActive(false);
         settingsCanvas.SetActive(false);
         Time.timeScale = 1;
-        activateMouseCursor();
+        deactivateMouseCursor();
         return true;
     }
 
-    public void deactivateMouseCursor() {
-        SeagullInputs seagullInputs = seagull.GetComponent<SeagullInputs>();
-        seagullInputs.cursorInputForLook = false;
+    public void deactivateMouseCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    public void activateMouseCursor() {
-        SeagullInputs seagullInputs = seagull.GetComponent<SeagullInputs>();
-        seagullInputs.cursorInputForLook = true;
+    public void activateMouseCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
-
-
 }
