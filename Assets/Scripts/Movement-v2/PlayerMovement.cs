@@ -46,7 +46,7 @@ namespace Movement_v2
 
         private Animator _animator;
 
-        public PlayerData playerData;
+        [HideInInspector] public PlayerData playerData;
 
         private void Awake()
         {

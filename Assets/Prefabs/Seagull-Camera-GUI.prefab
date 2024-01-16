@@ -1954,9 +1954,11 @@ MonoBehaviour:
   use: 0
   throwObject: 0
   shout: 0
+  eatingAudio: {fileID: 8300000, guid: 7dea77121f45945489cdedb6854061ff, type: 3}
   analogMovement: 0
   cursorLocked: 0
   cursorInputForLook: 1
+  playerData: {fileID: 0}
 --- !u!114 &4096106550944824348
 MonoBehaviour:
   m_ObjectHideFlags: 0

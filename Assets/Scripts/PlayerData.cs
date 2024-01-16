@@ -83,4 +83,9 @@ public class PlayerData : MonoBehaviour
             return false;
         }
     }
+
+    public void RefillHealth()
+    {
+        health = 100;
+    }
 }
